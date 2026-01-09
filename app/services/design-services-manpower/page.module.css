@@ -1,0 +1,88 @@
+.engagementModels {
+  padding: 5rem 0;
+  background: #f9fafb;
+}
+
+.modelCard {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #eaeaea;
+  height: 100%;
+}
+
+.modelCard h3 {
+  color: #0070f3;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.modelCard p {
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-size: 0.9375rem;
+}
+
+.modelCard ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modelCard li {
+  padding: 0.5rem 0;
+  color: #555;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+}
+
+.modelCard li::before {
+  content: '→';
+  margin-right: 0.5rem;
+  color: #0070f3;
+  font-weight: bold;
+}
+
+.industries {
+  padding: 5rem 0;
+  background: #fff;
+}
+
+.industriesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.industryItem {
+  background: #f9fafb;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #eaeaea;
+}
+
+.industryItem h3 {
+  font-size: 1.125rem;
+  margin-bottom: 0.75rem;
+  color: #1a1a1a;
+}
+
+.industryItem p {
+  color: #666;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .engagementModels,
+  .industries {
+    padding: 3rem 0;
+  }
+
+  .industriesGrid {
+    grid-template-columns: 1fr;
+  }
+}

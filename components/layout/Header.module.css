@@ -1,0 +1,132 @@
+.header {
+  background: #fff;
+  border-bottom: 1px solid #eaeaea;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+.logoText {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0070f3;
+  letter-spacing: -0.5px;
+}
+
+.nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+  padding: 0.5rem 0;
+}
+
+.nav a:hover {
+  color: #0070f3;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdownMenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  min-width: 240px;
+  padding: 0.5rem 0;
+  margin-top: 0.5rem;
+  z-index: 100;
+}
+
+.dropdown:hover .dropdownMenu,
+.dropdown:focus-within .dropdownMenu {
+  display: block;
+}
+
+.dropdownMenu li {
+  padding: 0;
+}
+
+.dropdownMenu a {
+  display: block;
+  padding: 0.75rem 1.25rem;
+  color: #333;
+  white-space: nowrap;
+}
+
+.dropdownMenu a:hover {
+  background: #f5f5f5;
+  color: #0070f3;
+}
+
+.ctaButton {
+  background: #0070f3;
+  color: #fff !important;
+  padding: 0.625rem 1.25rem !important;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.ctaButton:hover {
+  background: #0051cc;
+  color: #fff !important;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+    height: 60px;
+  }
+
+  .logoText {
+    font-size: 1.25rem;
+  }
+
+  .nav ul {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .nav a {
+    font-size: 0.875rem;
+  }
+
+  .dropdownMenu {
+    position: fixed;
+    left: 1rem;
+    right: 1rem;
+    width: auto;
+  }
+}

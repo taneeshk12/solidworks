@@ -1,0 +1,124 @@
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  padding: 4rem 0 3rem;
+}
+
+.hero h1 {
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 700px;
+}
+
+.services {
+  padding: 5rem 0;
+  background: #fff;
+}
+
+.benefits {
+  padding: 5rem 0;
+  background: #f9fafb;
+}
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.benefitItem {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #eaeaea;
+}
+
+.benefitItem h3 {
+  font-size: 1.125rem;
+  margin-bottom: 0.75rem;
+  color: #1a1a1a;
+}
+
+.benefitItem p {
+  color: #666;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+}
+
+.process {
+  padding: 5rem 0;
+  background: #fff;
+}
+
+.processSteps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.processStep {
+  text-align: center;
+}
+
+.stepNumber {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  font-size: 1.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.processStep h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #1a1a1a;
+}
+
+.processStep p {
+  color: #666;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 0 2rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .services,
+  .benefits,
+  .process {
+    padding: 3rem 0;
+  }
+
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .processSteps {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

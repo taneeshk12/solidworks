@@ -1,13 +1,98 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CAB Authorized - SEO-Friendly Next.js Website
 
-## Getting Started
+A production-ready, SEO-optimized frontend website built with Next.js 15 (App Router) and JavaScript, designed for deployment on Vercel.
 
-First, run the development server:
+## 🚀 Features
 
+### Frontend Architecture
+- **Next.js 15 App Router** with JavaScript
+- **Static Site Generation (SSG)** for optimal performance
+- Clean, scalable, and maintainable code structure
+- Backend-ready architecture (easy to extend later)
+
+### SEO Optimization
+- Complete metadata API implementation
+- Open Graph and Twitter Card tags
+- Structured data (JSON-LD) for rich snippets
+- Automatic sitemap generation
+- Robots.txt configuration
+- Semantic HTML with proper heading hierarchy
+- Image optimization with next/image
+- Canonical URLs for all pages
+
+### Pages
+- `/` - Home
+- `/about` - About Us
+- `/services` - Services Overview
+- `/services/solidworks-training` - SolidWorks Training
+- `/services/placement` - Placement Services
+- `/services/design-services-manpower` - Design Services & Manpower
+
+### Content Management
+Content is separated from code using JSON files in `/content`:
+- `siteMeta.json` - Global site metadata
+- `services.json` - Services data
+- `courses.json` - Course information
+- `gallery.json` - Gallery items
+
+## 📁 Project Structure
+
+```
+├── app/
+│   ├── layout.js                 # Root layout with global SEO
+│   ├── page.js                   # Home page
+│   ├── about/
+│   │   └── page.js              # About page
+│   ├── services/
+│   │   ├── page.js              # Services overview
+│   │   ├── solidworks-training/
+│   │   ├── placement/
+│   │   └── design-services-manpower/
+│   ├── sitemap.js               # Dynamic sitemap
+│   └── robots.js                # Robots.txt
+│
+├── components/
+│   ├── common/                   # Reusable components
+│   │   ├── Button.js
+│   │   └── Card.js
+│   ├── layout/                   # Layout components
+│   │   ├── Header.js
+│   │   └── Footer.js
+│   └── seo/                      # SEO components
+│       ├── StructuredData.js
+│       └── Breadcrumb.js
+│
+├── content/                      # JSON content files
+│   ├── siteMeta.json
+│   ├── services.json
+│   ├── courses.json
+│   └── gallery.json
+│
+├── styles/
+│   └── globals.css              # Global styles
+│
+└── utils/
+    └── seo.js                   # SEO utility functions
+```
+
+## 🛠️ Getting Started
+
+### Prerequisites
+- Node.js 18+ installed
+- npm or yarn package manager
+
+### Installation
+
+1. Navigate to the project directory
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Run the development server:
 ```bash
 npm run dev
-# or
-yarn dev
+
 # or
 pnpm dev
 # or

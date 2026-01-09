@@ -1,0 +1,76 @@
+{
+  "services": [
+    {
+      "id": "solidworks-training",
+      "title": "SolidWorks Training",
+      "shortDescription": "Master SolidWorks with industry-expert instructors and hands-on projects.",
+      "fullDescription": "Our comprehensive SolidWorks training program is designed for both beginners and professionals looking to enhance their CAD skills. Learn from certified instructors with real-world industry experience.",
+      "slug": "solidworks-training",
+      "icon": "🎓",
+      "features": [
+        "Industry-certified instructors",
+        "Hands-on project-based learning",
+        "Beginner to advanced levels",
+        "Latest SolidWorks version training",
+        "Certificate upon completion",
+        "Job-oriented curriculum"
+      ],
+      "benefits": [
+        "Increase your employability in design engineering",
+        "Learn industry-standard CAD software",
+        "Build a professional portfolio",
+        "Access to lifetime learning resources"
+      ],
+      "metaTitle": "SolidWorks Training Courses - Expert-Led CAD Training | CAB Authorized",
+      "metaDescription": "Learn SolidWorks from industry experts. Comprehensive training courses for beginners to advanced users. Hands-on projects, certification, and job placement assistance."
+    },
+    {
+      "id": "placement",
+      "title": "Placement Services",
+      "shortDescription": "Connect with top engineering companies and launch your career in design.",
+      "fullDescription": "Our placement services bridge the gap between talented engineers and leading companies. We provide comprehensive support including resume building, interview preparation, and direct connections with hiring companies.",
+      "slug": "placement",
+      "icon": "💼",
+      "features": [
+        "Direct connections with 100+ companies",
+        "Resume building and optimization",
+        "Mock interviews and feedback",
+        "Skill assessment and gap analysis",
+        "Career counseling sessions",
+        "Post-placement support"
+      ],
+      "benefits": [
+        "Access to exclusive job opportunities",
+        "Higher salary negotiations",
+        "Industry-specific career guidance",
+        "Faster job placement success"
+      ],
+      "metaTitle": "Engineering Placement Services - Career Support | CAB Authorized",
+      "metaDescription": "Expert placement services for design engineers. Connect with 100+ top companies, get resume support, interview prep, and career guidance. Start your engineering career today."
+    },
+    {
+      "id": "design-services-manpower",
+      "title": "Design Services & Manpower",
+      "shortDescription": "Expert design engineering resources and outsourcing solutions for your business.",
+      "fullDescription": "We provide skilled design engineering professionals and comprehensive outsourcing solutions to help your business scale efficiently. Our vetted engineers bring expertise in CAD, product design, and manufacturing.",
+      "slug": "design-services-manpower",
+      "icon": "🏭",
+      "features": [
+        "Skilled CAD engineers on demand",
+        "Product design and development",
+        "2D to 3D conversion services",
+        "Manufacturing drawing creation",
+        "Quality assurance and review",
+        "Flexible engagement models"
+      ],
+      "benefits": [
+        "Reduce operational costs",
+        "Scale your team quickly",
+        "Access specialized expertise",
+        "Focus on core business activities"
+      ],
+      "metaTitle": "Design Services & Engineering Manpower Solutions | CAB Authorized",
+      "metaDescription": "Professional design engineering manpower and outsourcing services. Skilled CAD engineers, product design, 2D/3D conversion. Flexible solutions for your business needs."
+    }
+  ]
+}

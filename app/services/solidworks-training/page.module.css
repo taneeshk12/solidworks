@@ -1,0 +1,280 @@
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  padding: 4rem 0;
+}
+
+.heroContent {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.heroText h1 {
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.heroDescription {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+  line-height: 1.7;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.heroIcon {
+  font-size: 10rem;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.features {
+  padding: 5rem 0;
+  background: #fff;
+}
+
+.features h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: #f9fafb;
+  border-radius: 8px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.checkmark {
+  color: #0070f3;
+  font-weight: bold;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.courses {
+  padding: 5rem 0;
+  background: #f9fafb;
+}
+
+.courseCard {
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.courseHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.courseHeader h3 {
+  font-size: 1.5rem;
+  color: #1a1a1a;
+  flex: 1;
+}
+
+.courseLevel {
+  background: #0070f3;
+  color: #fff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.courseDescription {
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-size: 0.9375rem;
+}
+
+.courseDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #f9fafb;
+  border-radius: 8px;
+}
+
+.detail {
+  font-size: 0.9375rem;
+  color: #555;
+}
+
+.detail strong {
+  color: #333;
+}
+
+.courseTopics {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid #eaeaea;
+}
+
+.courseTopics strong {
+  display: block;
+  margin-bottom: 0.75rem;
+  color: #333;
+  font-size: 0.9375rem;
+}
+
+.courseTopics ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.courseTopics li {
+  padding: 0.5rem 0;
+  color: #666;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+}
+
+.courseTopics li::before {
+  content: '→';
+  margin-right: 0.5rem;
+  color: #0070f3;
+  font-weight: bold;
+}
+
+.benefits {
+  padding: 5rem 0;
+  background: #fff;
+}
+
+.benefits h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.benefitCard {
+  background: #f9fafb;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #eaeaea;
+}
+
+.benefitIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.benefitCard p {
+  color: #555;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+}
+
+.cta {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  padding: 5rem 0;
+}
+
+.ctaContent {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta h2 {
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta p {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 0;
+  }
+
+  .heroContent {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .heroText h1 {
+    font-size: 2rem;
+  }
+
+  .heroDescription {
+    font-size: 1rem;
+  }
+
+  .heroIcon {
+    font-size: 6rem;
+  }
+
+  .features,
+  .courses,
+  .benefits,
+  .cta {
+    padding: 3rem 0;
+  }
+
+  .featuresGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta h2 {
+    font-size: 1.75rem;
+  }
+}

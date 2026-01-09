@@ -1,0 +1,76 @@
+{
+  "courses": [
+    {
+      "id": "solidworks-fundamentals",
+      "title": "SolidWorks Fundamentals",
+      "category": "Beginner",
+      "duration": "6 weeks",
+      "level": "Beginner",
+      "description": "Master the basics of SolidWorks including sketching, part modeling, assemblies, and drawings. Perfect for complete beginners.",
+      "topics": [
+        "Introduction to SolidWorks interface",
+        "2D sketching techniques",
+        "3D part modeling",
+        "Assembly creation",
+        "Engineering drawings",
+        "Basic simulation"
+      ],
+      "price": "Contact for pricing",
+      "certification": true
+    },
+    {
+      "id": "solidworks-advanced",
+      "title": "Advanced SolidWorks Design",
+      "category": "Advanced",
+      "duration": "8 weeks",
+      "level": "Advanced",
+      "description": "Advanced surface modeling, sheet metal design, weldments, and complex assemblies for experienced users.",
+      "topics": [
+        "Advanced surface modeling",
+        "Sheet metal design",
+        "Weldments and structures",
+        "Multi-body part design",
+        "Advanced assemblies",
+        "Design automation"
+      ],
+      "price": "Contact for pricing",
+      "certification": true
+    },
+    {
+      "id": "solidworks-simulation",
+      "title": "SolidWorks Simulation & Analysis",
+      "category": "Specialized",
+      "duration": "4 weeks",
+      "level": "Intermediate",
+      "description": "Learn to perform structural, thermal, and flow analysis using SolidWorks Simulation tools.",
+      "topics": [
+        "Static analysis",
+        "Frequency and buckling analysis",
+        "Thermal analysis",
+        "Drop test simulation",
+        "Flow simulation basics",
+        "Design optimization"
+      ],
+      "price": "Contact for pricing",
+      "certification": true
+    },
+    {
+      "id": "mechanical-design",
+      "title": "Mechanical Design for Manufacturing",
+      "category": "Professional",
+      "duration": "10 weeks",
+      "level": "Intermediate",
+      "description": "Comprehensive course covering design for manufacturing principles, GD&T, and industry best practices.",
+      "topics": [
+        "DFM principles",
+        "GD&T fundamentals",
+        "Tolerance analysis",
+        "Material selection",
+        "Manufacturing processes",
+        "Cost optimization"
+      ],
+      "price": "Contact for pricing",
+      "certification": true
+    }
+  ]
+}
