@@ -1,59 +1,64 @@
 .footer {
-  background: #1a1a1a;
+  background: linear-gradient(178.7deg, #3A0268 -15.3%, #7304CE 137.81%);
+  border-top: 1px solid #6B21A8;
   color: #fff;
-  padding: 3rem 0 1rem;
-  margin-top: 4rem;
+  padding: 4rem 0 1rem;
+  margin-top: 0;
+  /* Remove top margin if design suggests full fluid flow or adjust as needed */
+  font-family: sans-serif;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 2rem;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2.5rem;
-  margin-bottom: 3rem;
+  grid-template-columns: 1.5fr 1fr 1.5fr 1.5fr;
+  gap: 3rem;
+  margin-bottom: 4rem;
 }
 
-.column h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #0070f3;
-}
-
-.column h4 {
-  font-size: 1.125rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-
-.description {
-  color: #b0b0b0;
-  line-height: 1.6;
-  font-size: 0.9375rem;
-}
-
-.social {
+/* Brand Section */
+.brand {
   display: flex;
+  align-items: center;
   gap: 1rem;
-  margin-top: 1.5rem;
 }
 
-.social a {
-  color: #fff;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  background: #333;
-  border-radius: 4px;
+.logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  background: white;
+  /* Ensure logo is visible on purple bg */
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.brandName {
+  color: #FF8A00;
+  /* Orange color from logo match */
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.tagline {
+  color: #E2E8F0;
   font-size: 0.875rem;
-  transition: background 0.2s ease;
 }
 
-.social a:hover {
-  background: #0070f3;
+/* Columns */
+.column h4 {
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+  color: #fff;
 }
 
 .column ul {
@@ -67,88 +72,101 @@
 }
 
 .column ul a {
-  color: #b0b0b0;
+  color: #E2E8F0;
   text-decoration: none;
-  transition: color 0.2s ease;
   font-size: 0.9375rem;
+  transition: color 0.2s ease;
 }
 
 .column ul a:hover {
-  color: #0070f3;
+  color: #FF8A00;
 }
 
-.address {
-  font-style: normal;
-  color: #b0b0b0;
+/* Contact List */
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: #E2E8F0;
   font-size: 0.9375rem;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
-.address p {
-  margin-bottom: 1rem;
-}
-
-.address a {
-  color: #b0b0b0;
+.contactItem a {
+  color: #E2E8F0;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
-.address a:hover {
-  color: #0070f3;
+.contactItem a:hover {
+  color: #FF8A00;
 }
 
+.icon {
+  color: #FF8A00;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Bottom Bar */
 .bottom {
-  border-top: 1px solid #333;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
 }
 
-.bottom p {
-  margin: 0;
-  color: #999;
+.copyright,
+.credits {
   font-size: 0.875rem;
+  color: #E2E8F0;
+  opacity: 0.8;
 }
 
-.legal {
+.social {
   display: flex;
-  gap: 0.5rem;
+  gap: 1.5rem;
   align-items: center;
-  font-size: 0.875rem;
 }
 
-.legal a {
-  color: #999;
-  text-decoration: none;
-  transition: color 0.2s ease;
+.social a {
+  color: white;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
-.legal a:hover {
-  color: #0070f3;
-}
-
-.divider {
-  color: #666;
+.social a:hover {
+  transform: translateY(-2px);
+  color: #FF8A00;
 }
 
 /* Mobile Responsive */
-@media (max-width: 768px) {
-  .footer {
-    padding: 2rem 0 1rem;
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
+}
 
+@media (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
   }
 
   .bottom {
     flex-direction: column;
+    gap: 1.5rem;
     text-align: center;
-    gap: 1rem;
+  }
+
+  .brand {
+    flex-direction: column;
+    text-align: center;
   }
 }

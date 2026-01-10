@@ -1,208 +1,148 @@
+import Link from 'next/link';
+import Image from 'next/image';
 import { generateMetadata as generateSEOMetadata } from '@/utils/seo';
-import Breadcrumb from '@/components/seo/Breadcrumb';
-import Button from '@/components/common/Button';
+import WhyChooseUs from '@/components/common/WhyChooseUs';
+import CallToAction from '@/components/common/CallToAction';
 import styles from './page.module.css';
 
 export const metadata = generateSEOMetadata({
   title: 'About Us',
-  description:
-    'Learn about CAB Authorized - your trusted partner in engineering education and career development. We empower engineers with industry-leading SolidWorks training and career support.',
+  description: 'Learn about Bhavya Future EduTech, our mission, vision, and the future of design engineering education.',
   canonical: '/about',
 });
 
+const clients = [
+  "A P CLUTCHES PVT LTD.png", "BAroda hi tech.jpg", "DSS Automation.png", "ET.png",
+  "Emphetech.jpg", "Expel Prosys.jpg", "Flamertech.png", "Flexatherm.png",
+  "GBT Composites Technology Ltd..jpg", "Growell.png", "Idex.jpg", "L & T.png",
+  "Narkhede.png", "Orbit.jpg", "PAkona.png", "Popukar Switchgear.jpg",
+  "RSIS.jpg", "Rotex.jpg", "SDEC.png", "TATA_Consultancy_Services.png",
+  "Ultimate Switchgear.jpg", "UnipackTransLogo.png", "Vexma Technologies.png",
+  "Xylem.png", "moflex suspensions llp.png", "parth Kitchen.png", "schurter-logo-approved.png"
+];
+
+const glimpses = [
+  "photo1.jpeg", "photo2.jpeg", "photo3.jpeg",
+  "photo4.jpeg", "photo5.jpeg", "photo6.jpeg"
+];
+
 export default function AboutPage() {
-  const breadcrumbItems = [
-    { name: 'Home', url: '/' },
-    { name: 'About Us', url: '/about' },
-  ];
-
   return (
-    <>
+    <div className={styles.pageContainer}>
+
+      {/* Hero Section */}
       <section className={styles.hero}>
-        <div className="container">
-          <Breadcrumb items={breadcrumbItems} />
-          <h1>About CAB Authorized</h1>
-          <p className={styles.subtitle}>
-            Empowering engineers to excel in design engineering through
-            world-class training and career support
-          </p>
+        <div className={styles.heroOverlay}></div>
+        <div className={styles.heroContent}>
+          <h1 className={styles.heroTitle}>About Our Institute</h1>
         </div>
       </section>
 
-      <section className={styles.mission}>
+      {/* Intro Section */}
+      <section className={styles.introSection}>
         <div className="container">
-          <div className={styles.missionGrid}>
-            <div className={styles.missionContent}>
-              <h2>Our Mission</h2>
+          <h2 className={styles.sectionTitle}>
+            Shaping the Future <span className={styles.highlightText}>of Design Engineering</span>
+          </h2>
+          <div className={styles.introContent}>
+            <p>
+              We are a recognized training organization dedicated to providing comprehensive education and professional services in SOLIDWORKS, a powerful solid modeling CAD (Computer-Aided Design) and CAE (Computer-Aided Engineering) software platform widely adopted across the design and manufacturing industries.
+            </p>
+            <p>
+              Our curriculum is carefully structured to meet current industry standards and technological advancements, offering industry-focused courses for designers, engineers, and architects in the fields of Mechanical, Electrical, Automotive, Robotics, Mechatronics, and Aeronautical Engineering.
+            </p>
+            <p>
+              Through practical learning and expert guidance, we aim to bridge the gap between academic knowledge and industrial application.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission Section */}
+      <section className={styles.splitSection}>
+        <div className="container">
+          <div className={styles.splitGrid}>
+            <div className={styles.imageWrapper}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/mission.png" alt="Our Mission" className={styles.splitImage} />
+            </div>
+            <div className={styles.textContent}>
+              <h2 className={styles.splitTitle}>Our Mission</h2>
               <p>
-                At CAB Authorized, we are committed to bridging the gap between
-                engineering education and industry requirements. Our mission is to
-                empower aspiring and professional engineers with the skills,
-                knowledge, and opportunities they need to succeed in the
-                competitive world of design engineering.
-              </p>
-              <p>
-                We believe that quality education combined with practical
-                experience creates exceptional engineers. Through our
-                comprehensive training programs, placement support, and design
-                services, we help individuals and organizations achieve their
-                goals.
+                Our mission is to deliver exceptional SOLIDWORKS-based services through cutting-edge training, reliable design solutions, and career-building support. We are committed to nurturing talent, driving innovation, and bridging the gap between education and industry with integrity, quality, and a passion for engineering excellence.
               </p>
             </div>
-            <div className={styles.missionStats}>
-              <div className={styles.stat}>
-                <div className={styles.statNumber}>500+</div>
-                <div className={styles.statLabel}>Students Trained</div>
+          </div>
+        </div>
+      </section>
+
+      {/* Vision Section */}
+      <section className={`${styles.splitSection} ${styles.altBg}`}>
+        <div className="container">
+          <div className={`${styles.splitGrid} ${styles.reverseGrid}`}>
+            <div className={styles.textContent}>
+              <h2 className={styles.splitTitle}>Our Vision</h2>
+              <p>
+                To be the most trusted and innovative partner in SOLIDWORKS solutions, empowering individuals and industries to design, innovate, and build a smarter future.
+              </p>
+            </div>
+            <div className={styles.imageWrapper}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/vision.png" alt="Our Vision" className={styles.splitImage} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <WhyChooseUs />
+
+      {/* Our Clients */}
+      <section className={styles.clientsSection}>
+        <div className="container">
+          <h2 className={styles.sectionTitleCenter}>Our Clients</h2>
+          <div className={styles.clientsGrid}>
+            {clients.map((logo, index) => (
+              <div key={index} className={styles.clientLogoWrapper}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={`/Company Logo/${logo}`}
+                  alt={`Client ${index + 1}`}
+                  className={styles.clientLogo}
+                />
               </div>
-              <div className={styles.stat}>
-                <div className={styles.statNumber}>100+</div>
-                <div className={styles.statLabel}>Partner Companies</div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Glimpses */}
+      <section className={styles.glimpsesSection}>
+        <div className="container">
+          <h2 className={styles.sectionTitleCenter}>Glimpses of Our Center</h2>
+          <div className={styles.glimpsesGrid}>
+            {glimpses.map((pic, index) => (
+              <div key={index} className={styles.glimpseWrapper}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={`/center_pics/${pic}`}
+                  alt={`Center Glimpse ${index + 1}`}
+                  className={styles.glimpseImage}
+                />
               </div>
-              <div className={styles.stat}>
-                <div className={styles.statNumber}>95%</div>
-                <div className={styles.statLabel}>Placement Rate</div>
-              </div>
-              <div className={styles.stat}>
-                <div className={styles.statNumber}>10+</div>
-                <div className={styles.statLabel}>Years Experience</div>
-              </div>
-            </div>
+            ))}
+          </div>
+          <div className={styles.viewMoreWrapper}>
+            <Link href="/gallery" className={styles.viewMoreBtn}>
+              View More
+            </Link>
           </div>
         </div>
       </section>
 
-      <section className={styles.values}>
-        <div className="container">
-          <div className="section-header">
-            <h2>Our Core Values</h2>
-            <p>
-              The principles that guide everything we do at CAB Authorized
-            </p>
-          </div>
-          <div className={styles.valuesGrid}>
-            <div className={styles.valueCard}>
-              <div className={styles.valueIcon}>🎯</div>
-              <h3>Excellence</h3>
-              <p>
-                We strive for excellence in everything we deliver - from course
-                content to student support, maintaining the highest standards in
-                engineering education.
-              </p>
-            </div>
-            <div className={styles.valueCard}>
-              <div className={styles.valueIcon}>💡</div>
-              <h3>Innovation</h3>
-              <p>
-                We continuously update our curriculum and teaching methods to
-                align with the latest industry trends and technological
-                advancements.
-              </p>
-            </div>
-            <div className={styles.valueCard}>
-              <div className={styles.valueIcon}>🤝</div>
-              <h3>Integrity</h3>
-              <p>
-                We operate with complete transparency and honesty, building trust
-                through consistent actions and ethical practices.
-              </p>
-            </div>
-            <div className={styles.valueCard}>
-              <div className={styles.valueIcon}>🌱</div>
-              <h3>Growth</h3>
-              <p>
-                We are committed to the continuous growth of our students,
-                partners, and team members through learning and development.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* CTA Section */}
+      <CallToAction />
 
-      <section className={styles.story}>
-        <div className="container">
-          <h2>Our Story</h2>
-          <div className={styles.storyContent}>
-            <p>
-              CAB Authorized was founded with a simple yet powerful vision: to
-              make world-class engineering education accessible to aspiring
-              designers and engineers. What started as a small training center has
-              grown into a comprehensive platform offering training, placement,
-              and design services.
-            </p>
-            <p>
-              Over the years, we've had the privilege of working with hundreds of
-              students who have gone on to build successful careers in leading
-              engineering companies. Our partnerships with industry leaders ensure
-              that our students receive training that directly translates to
-              workplace success.
-            </p>
-            <p>
-              Today, we continue to evolve and expand our offerings, always
-              keeping our focus on what matters most: helping engineers achieve
-              their career goals and helping businesses access top design talent.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className={styles.approach}>
-        <div className="container">
-          <h2>Our Approach</h2>
-          <div className={styles.approachGrid}>
-            <div className={styles.approachItem}>
-              <h3>1. Industry-Aligned Curriculum</h3>
-              <p>
-                Our courses are designed in consultation with industry
-                professionals to ensure they meet real-world requirements and
-                prepare students for actual job roles.
-              </p>
-            </div>
-            <div className={styles.approachItem}>
-              <h3>2. Hands-On Training</h3>
-              <p>
-                We emphasize practical, project-based learning where students work
-                on real design challenges, building a portfolio that showcases
-                their capabilities.
-              </p>
-            </div>
-            <div className={styles.approachItem}>
-              <h3>3. Personalized Support</h3>
-              <p>
-                Every student receives individual attention with personalized
-                career counseling, resume building, and interview preparation to
-                maximize their success.
-              </p>
-            </div>
-            <div className={styles.approachItem}>
-              <h3>4. Continuous Improvement</h3>
-              <p>
-                We regularly update our content, methods, and technology to stay
-                ahead of industry trends and provide the most relevant education.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className={styles.cta}>
-        <div className="container">
-          <div className={styles.ctaContent}>
-            <h2>Join Our Community</h2>
-            <p>
-              Ready to take your engineering career to the next level? Get in
-              touch with us today.
-            </p>
-            <div className={styles.ctaButtons}>
-              <Button href="/services" size="large">
-                Explore Our Services
-              </Button>
-              <Button href="/#contact" variant="secondary" size="large">
-                Contact Us
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
+    </div>
   );
 }

@@ -1,44 +1,78 @@
-/* Hero Section */
-.hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: #fff;
-  padding: 6rem 0;
-  text-align: center;
+/* Hero Section - Handled by Hero component */
+
+/* About Us Section */
+.about {
+  padding: 5rem 0;
+  background: #fff;
 }
 
-.hero h1 {
-  color: #fff;
-  font-size: 3.5rem;
-  margin-bottom: 1.5rem;
-  line-height: 1.1;
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
 }
 
-.heroSubtitle {
-  font-size: 1.25rem;
+.aboutImageWrapper {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.aboutImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.aboutContent {
+  padding-left: 1rem;
+}
+
+.aboutContent p {
+  color: #666;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.aboutList {
+  list-style: none;
+  padding: 0;
   margin-bottom: 2.5rem;
-  opacity: 0.95;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-.heroButtons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
+.aboutList li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+  color: #4b5563;
+  font-weight: 500;
+}
+
+.aboutList li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #EA580C;
+  /* Primary brand color */
+  font-weight: bold;
 }
 
 /* Services Section */
 .services {
   padding: 5rem 0;
-  background: #fff;
+  background: #f9fafb;
+  /* Changed to alternating background */
 }
 
 /* Courses Section */
 .courses {
   padding: 5rem 0;
-  background: #f9fafb;
+  background: #fff;
+  /* Changed to alternating background */
 }
 
 .coursesFooter {
@@ -49,7 +83,8 @@
 /* Why Choose Us Section */
 .whyChooseUs {
   padding: 5rem 0;
-  background: #fff;
+  background: #f9fafb;
+  /* Changed to alternating background */
 }
 
 .whyGrid {
@@ -81,7 +116,7 @@
 
 /* CTA Section */
 .cta {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #EA580C 0%, #6B21A8 100%);
   color: #fff;
   padding: 5rem 0;
 }
@@ -125,11 +160,21 @@
     font-size: 1rem;
   }
 
+  .about,
   .services,
   .courses,
   .whyChooseUs,
   .cta {
     padding: 3rem 0;
+  }
+
+  .aboutGrid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .aboutContent {
+    padding-left: 0;
   }
 
   .whyGrid {
@@ -141,4 +186,3 @@
     font-size: 1.75rem;
   }
 }
-

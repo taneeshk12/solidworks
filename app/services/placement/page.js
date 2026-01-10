@@ -1,139 +1,139 @@
-import { generateMetadata as generateSEOMetadata, generateServiceSchema } from '@/utils/seo';
-import Breadcrumb from '@/components/seo/Breadcrumb';
-import StructuredData from '@/components/seo/StructuredData';
-import Button from '@/components/common/Button';
-import servicesData from '@/content/services.json';
-import styles from '../solidworks-training/page.module.css';
-
-const service = servicesData.services.find(s => s.slug === 'placement');
+import { generateMetadata as generateSEOMetadata } from '@/utils/seo';
+import CallToAction from '@/components/common/CallToAction';
+import ClientsMarquee from '@/components/common/ClientsMarquee';
+import { Briefcase, Users, CheckCircle, GraduationCap } from 'lucide-react';
+import styles from './placement.module.css';
 
 export const metadata = generateSEOMetadata({
-  title: service.metaTitle,
-  description: service.metaDescription,
-  canonical: `/services/${service.slug}`,
-  keywords: ['engineering placement', 'job placement services', 'career support'],
+  title: 'Placement Assistance - Bhavya Future EduTech',
+  description: 'Launch your career with our 100% placement support. We connect engineers with 1000+ top companies.',
+  canonical: '/services/placement',
 });
 
 export default function PlacementPage() {
-  const serviceSchema = generateServiceSchema(service);
-
-  const breadcrumbItems = [
-    { name: 'Home', url: '/' },
-    { name: 'Services', url: '/services' },
-    { name: service.title, url: `/services/${service.slug}` },
-  ];
-
   return (
-    <>
-      <StructuredData data={serviceSchema} />
-      
+    <div className={styles.pageContainer}>
+
+      {/* Hero Section */}
       <section className={styles.hero}>
-        <div className="container">
-          <Breadcrumb items={breadcrumbItems} />
-          <div className={styles.heroContent}>
-            <div className={styles.heroText}>
-              <h1>{service.title}</h1>
-              <p className={styles.heroDescription}>{service.fullDescription}</p>
-              <div className={styles.heroButtons}>
-                <Button href="#features" size="large">
-                  Learn More
-                </Button>
-                <Button href="#contact" variant="secondary" size="large">
-                  Get Started
-                </Button>
+        <div className={styles.heroOverlay}></div>
+        <div className={styles.heroContent}>
+          <h1 className={styles.heroTitle}>Placement Assistance Program</h1>
+        </div>
+      </section>
+
+      {/* Stats Bar */}
+      <div className={styles.statsContainer}>
+        <div className="container" style={{ position: 'relative', zIndex: 10 }}>
+          <div className={styles.statsBar}>
+            <div className={styles.statItem}>
+              <div className={`${styles.statIcon} ${styles.iconOrange}`}><Briefcase size={24} /></div>
+              <div>
+                <div className={styles.statNumber}>10+</div>
+                <div className={styles.statLabel}>YEARS IN BUSINESS</div>
               </div>
             </div>
-            <div className={styles.heroIcon}>{service.icon}</div>
-          </div>
-        </div>
-      </section>
-
-      <section className={styles.features} id="features">
-        <div className="container">
-          <h2>Placement Support Features</h2>
-          <div className={styles.featuresGrid}>
-            {service.features.map((feature, index) => (
-              <div key={index} className={styles.featureItem}>
-                <span className={styles.checkmark}>✓</span>
-                <span>{feature}</span>
+            <div className={styles.statDivider}></div>
+            <div className={styles.statItem}>
+              <div className={`${styles.statIcon} ${styles.iconPurple}`}><Users size={24} /></div>
+              <div>
+                <div className={styles.statNumber}>1000+</div>
+                <div className={styles.statLabel}>STUDENTS TRAINED</div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className={styles.benefits}>
-        <div className="container">
-          <h2>Why Our Placement Services Stand Out</h2>
-          <div className={styles.benefitsGrid}>
-            {service.benefits.map((benefit, index) => (
-              <div key={index} className={styles.benefitCard}>
-                <div className={styles.benefitIcon}>💼</div>
-                <p>{benefit}</p>
+            </div>
+            <div className={styles.statDivider}></div>
+            <div className={styles.statItem}>
+              <div className={`${styles.statIcon} ${styles.iconGreen}`}><CheckCircle size={24} /></div>
+              <div>
+                <div className={styles.statNumber}>90%</div>
+                <div className={styles.statLabel}>STUDENTS PLACED</div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className={styles.features} style={{ background: '#f9fafb' }}>
-        <div className="container">
-          <div className="section-header">
-            <h2>Our Placement Process</h2>
-            <p>A structured approach to secure your dream job</p>
-          </div>
-          <div className="grid grid-2">
-            <div className={styles.processCard}>
-              <h3>1. Profile Assessment</h3>
-              <p>
-                We evaluate your skills, experience, and career goals to identify
-                the best opportunities that match your profile.
-              </p>
             </div>
-            <div className={styles.processCard}>
-              <h3>2. Resume & Portfolio Building</h3>
-              <p>
-                Our experts help you create a compelling resume and portfolio that
-                highlights your strengths and projects effectively.
-              </p>
-            </div>
-            <div className={styles.processCard}>
-              <h3>3. Interview Preparation</h3>
-              <p>
-                Comprehensive mock interviews, technical assessments, and soft
-                skills training to boost your confidence.
-              </p>
-            </div>
-            <div className={styles.processCard}>
-              <h3>4. Company Connections</h3>
-              <p>
-                Direct introductions to hiring managers at our 100+ partner
-                companies across various industries.
-              </p>
+            <div className={styles.statDivider}></div>
+            <div className={styles.statItem}>
+              <div className={`${styles.statIcon} ${styles.iconRed}`}><GraduationCap size={24} /></div>
+              <div>
+                <div className={styles.statNumber}>1000+</div>
+                <div className={styles.statLabel}>CLIENTS</div>
+              </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      <section className={styles.cta} id="contact">
+      {/* Description Section */}
+      <section className={styles.descSection}>
         <div className="container">
-          <div className={styles.ctaContent}>
-            <h2>Launch Your Engineering Career</h2>
+          <div className={styles.descBox}>
             <p>
-              Get personalized placement support and connect with top engineering
-              companies. Start your journey to a rewarding career today.
+              We bridge the gap between education and employment by delivering industry-focused, job-oriented training in the CAD / CAM. Beyond technical skill development, we provide end-to-end career support—including placement guidance, interview preparation, and professional mentorship—to help students build confidence and launch successful careers in engineering, design, and manufacturing.
             </p>
-            <div className={styles.ctaButtons}>
-              <Button href="mailto:info@cabauthorized.com" size="large">
-                Email Us
-              </Button>
-              <Button href="tel:+91-XXXXXXXXXX" variant="secondary" size="large">
-                Call Now
-              </Button>
-            </div>
+            <p>
+              We offer exciting internship opportunities for engineering students and professionals, designed to build strong practical and industry-ready skills.
+              We actively mentor final-semester engineering students on their academic projects, providing hands-on guidance, real-world engineering exposure, and a clear connection between theoretical concepts and industry applications.
+            </p>
+            <p>
+              Additionally, we provide internship and placement assistance to engineers and working professionals through our network of 1000+ associated and renowned client companies, helping candidates unlock meaningful career opportunities and industry roles.
+            </p>
           </div>
         </div>
       </section>
-    </>
+
+      {/* Who Can Apply Section */}
+      <section className={styles.applySection}>
+        <div className="container">
+          <h2 className={styles.sectionTitle}>Who Can Apply?</h2>
+          <p className={styles.sectionSubtitle}>Our placement program is open to candidates from various educational backgrounds</p>
+
+          <div className={styles.cardsGrid}>
+            {/* Card 1 - Orange */}
+            <div className={`${styles.applyCard} ${styles.cardOne}`}>
+              <div className={styles.cardIconWrapper}>
+                <GraduationCap size={32} color="#EA580C" className={styles.cardIcon} />
+              </div>
+              <h3 className={styles.cardTitle}>Engineering Students</h3>
+              <p className={styles.cardSub}>Degree / Diploma / ITI</p>
+            </div>
+
+            {/* Card 2 - Yellow */}
+            <div className={`${styles.applyCard} ${styles.cardTwo}`}>
+              <div className={styles.cardIconWrapper}>
+                <Briefcase size={32} color="#F59E0B" className={styles.cardIcon} />
+              </div>
+              <h3 className={styles.cardTitle}>Working Professionals</h3>
+            </div>
+
+            {/* Card 3 - Purple */}
+            <div className={`${styles.applyCard} ${styles.cardThree}`}>
+              <div className={styles.cardIconWrapper}>
+                <CheckCircle size={32} color="#6B21A8" className={styles.cardIcon} />
+              </div>
+              <h3 className={styles.cardTitle}>Engineering Graduates</h3>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* Trusted By Section */}
+      <section className={styles.trustedSection}>
+        <div className="container">
+          <h4 className={styles.trustedTitle}>TRUSTED BY INDUSTRY LEADERS</h4>
+        </div>
+        <ClientsMarquee />
+      </section>
+
+
+      {/* CTA Section */}
+      <CallToAction
+        title="Ready to Start Your Dream Job?"
+        subtitle="Join the ranks of successful alumni. Register for our upcoming batch and get full placement assistance."
+        buttonText="Register Now"
+        buttonLink="/#contact"
+        secondaryButtonText="Contact Counselors"
+        secondaryButtonLink="/#contact"
+      />
+
+    </div>
   );
 }

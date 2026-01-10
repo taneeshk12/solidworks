@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import siteMeta from '@/content/siteMeta.json';
+import { MapPin, Phone, Mail, Instagram, Linkedin, Facebook, Twitter } from 'lucide-react';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -9,49 +9,22 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.grid}>
-          {/* Company Info */}
+          {/* Brand Info */}
           <div className={styles.column}>
-            <h3>CAB Authorized</h3>
-            <p className={styles.description}>
-              Leading provider of SolidWorks training, placement services, and
-              design engineering solutions. Empowering engineers to excel in
-              their careers.
-            </p>
-            <div className={styles.social}>
-              <a
-                href={siteMeta.socialMedia.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-              >
-                LinkedIn
-              </a>
-              <a
-                href={siteMeta.socialMedia.twitter}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Twitter"
-              >
-                Twitter
-              </a>
-              <a
-                href={siteMeta.socialMedia.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-              >
-                Facebook
-              </a>
+            <div className={styles.brand}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/logo.jpeg" alt="Bhavya Future EduTech" className={styles.logo} />
+              <div>
+                <h3 className={styles.brandName}>Bhavya Future EduTech</h3>
+                <p className={styles.tagline}>Learn Design, Lead the World</p>
+              </div>
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Institute */}
           <div className={styles.column}>
-            <h4>Quick Links</h4>
+            <h4>INSTITUTE</h4>
             <ul>
-              <li>
-                <Link href="/">Home</Link>
-              </li>
               <li>
                 <Link href="/about">About Us</Link>
               </li>
@@ -59,69 +32,74 @@ export default function Footer() {
                 <Link href="/services">Services</Link>
               </li>
               <li>
-                <Link href="/#contact">Contact</Link>
+                <Link href="/clients">Clients</Link>
+              </li>
+              <li>
+                <Link href="/testimonials">Testimonials</Link>
               </li>
             </ul>
           </div>
 
           {/* Services */}
           <div className={styles.column}>
-            <h4>Our Services</h4>
+            <h4>SERVICES</h4>
             <ul>
               <li>
                 <Link href="/services/solidworks-training">
-                  SolidWorks Training
+                  SOLIDWORKS Training
                 </Link>
               </li>
               <li>
-                <Link href="/services/placement">Placement Services</Link>
+                <Link href="/services/placement">Placement</Link>
               </li>
               <li>
                 <Link href="/services/design-services-manpower">
-                  Design Services & Manpower
+                  Design Services and Manpower Supply
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Get in Touch */}
           <div className={styles.column}>
-            <h4>Contact Us</h4>
-            <address className={styles.address}>
-              <p>
-                <strong>Email:</strong>
-                <br />
-                <a href={`mailto:${siteMeta.contactEmail}`}>
-                  {siteMeta.contactEmail}
-                </a>
-              </p>
-              <p>
-                <strong>Phone:</strong>
-                <br />
-                <a href={`tel:${siteMeta.contactPhone}`}>
-                  {siteMeta.contactPhone}
-                </a>
-              </p>
-              <p>
-                <strong>Address:</strong>
-                <br />
-                {siteMeta.address.city}, {siteMeta.address.state}
-                <br />
-                {siteMeta.address.country}
-              </p>
-            </address>
+            <h4>GET IN TOUCH</h4>
+            <div className={styles.contactList}>
+              <div className={styles.contactItem}>
+                <MapPin className={styles.icon} size={20} />
+                <p>
+                  8th Floor, Yashkamal Building, 802, opp. faculty Of
+                  Arts, Sayajiganj, Vadodara, Gujarat 390005
+                </p>
+              </div>
+              <div className={styles.contactItem}>
+                <Phone className={styles.icon} size={20} />
+                <a href="tel:09376211272">093762 11272</a>
+              </div>
+              <div className={styles.contactItem}>
+                <Mail className={styles.icon} size={20} />
+                <a href="mailto:admissions@sw-institute.com">admissions@sw-institute.com</a>
+              </div>
+            </div>
           </div>
         </div>
 
         <div className={styles.bottom}>
-          <p>
-            &copy; {currentYear} {siteMeta.siteName}. All rights reserved.
+          <p className={styles.copyright}>
+            &copy; {currentYear} Bhavya Future EduTech. All rights reserved.
           </p>
-          <div className={styles.legal}>
-            <Link href="/privacy">Privacy Policy</Link>
-            <span className={styles.divider}>|</span>
-            <Link href="/terms">Terms of Service</Link>
+
+          <div className={styles.social}>
+            <a href="#" aria-label="Instagram"><Instagram size={24} /></a>
+            <a href="https://wa.me/919376211272" aria-label="WhatsApp"><Phone size={24} /></a> {/* Using Phone as generic replacement if MessageCircle not available, but Lucide has MessageCircle/Phone */}
+            <a href="mailto:admissions@sw-institute.com" aria-label="Email"><Mail size={24} /></a>
+            <a href="#" aria-label="LinkedIn"><Linkedin size={24} /></a>
+            <a href="#" aria-label="Facebook"><Facebook size={24} /></a>
+            <a href="#" aria-label="X"><Twitter size={24} /></a>
           </div>
+
+          <p className={styles.credits}>
+            Made by CtrlAltBuild Technologies
+          </p>
         </div>
       </div>
     </footer>

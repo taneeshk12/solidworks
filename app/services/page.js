@@ -1,159 +1,154 @@
 import Link from 'next/link';
 import { generateMetadata as generateSEOMetadata } from '@/utils/seo';
-import Breadcrumb from '@/components/seo/Breadcrumb';
-import Card from '@/components/common/Card';
-import servicesData from '@/content/services.json';
+import CallToAction from '@/components/common/CallToAction';
 import styles from './page.module.css';
 
 export const metadata = generateSEOMetadata({
   title: 'Our Services',
-  description:
-    'Comprehensive design engineering services including SolidWorks training, placement support, and professional manpower solutions. Transform your career or scale your business.',
+  description: 'Explore our comprehensive services: SolidWorks Training, Placement Support, and Design Engineering Solutions.',
   canonical: '/services',
-  keywords: [
-    'SolidWorks training services',
-    'engineering placement',
-    'CAD design services',
-    'engineering manpower',
-  ],
 });
 
+const servicesList = [
+  {
+    id: 'solidworks-training',
+    title: 'SolidWorks Training',
+    image: '/services/training.png',
+    description: [
+      "We are Authorized Training Centre for SOLIDWORKS - Dassault Systemes, S.A France.",
+      "Our SOLIDWORKS training delivers hands-on experience in concept planning, design visualization, 3D modeling, and production-ready engineering drawings.",
+      "We offer courses in Modeling, Computer Aided Design (CAD), Computer Aided Engineering (CAE), Computational Fluid Dynamics (CFD), Simulation & Analysis, Computer Aided Manufacturing (CAM) and 3D Printing.",
+      "We provide bespoke corporate training solutions designed to align with organizational objectives, engineering standards, and operational workflows. Our programs are structured around real-world industry applications, enabling engineering teams to enhance technical proficiency, improve design effectiveness, and maximize the strategic use of SOLIDWORKS in support of manufacturing excellence and business performance."
+    ],
+    buttonText: 'Know More',
+    link: '/services/solidworks-training'
+  },
+  {
+    id: 'placements',
+    title: 'Placements',
+    image: '/services/placements.png',
+    description: [
+      "We bridge the gap between education and employment by delivering industry-focused job-oriented training in the CAD/CAM domain. Beyond technical skill development, we provide end-to-end career support—including placement guidance, interview preparation, and professional mentorship—to help students build confidence and launch successful careers in engineering design and manufacturing.",
+      "We offer exciting internship opportunities for engineering students and professionals, designed to build strong practical and industry-ready skills.",
+      "We actively mentor final-semester engineering students on their academic projects, providing hands-on guidance, real-world engineering exposure, and a clear connection between theoretical concepts and industry applications.",
+      "Additionally, we provide Internship and placement assistance to engineers and working professionals through our network of 1000+ associated and renowned client companies, helping candidates unlock meaningful career opportunities."
+    ],
+    buttonText: 'Know More',
+    link: '/services/placement'
+  },
+  {
+    id: 'design-services',
+    title: 'Design Services & Manpower supply',
+    image: '/services/3d .png',
+    description: [
+      "We provide professional 3D design, CAD/CAM job work and design manpower supply services for mechanical and industrial projects. Our team delivers high-precision modeling, detailed drafting, and skilled design resources to support design projects with industry standards.",
+      "From concept development to manufacturing-ready drawings and reliable design manpower support, we ensure innovative, accurate, and reliable design solutions delivered on time."
+    ],
+    buttonText: 'Know More',
+    link: '/services/design-services-manpower'
+  }
+];
+
+const steps = [
+  {
+    id: 1,
+    title: 'Consultation',
+    desc: 'Understanding your career goals or project requirements.',
+    color: '#EA580C' // Orange
+  },
+  {
+    id: 2,
+    title: 'Custom Plan',
+    desc: 'Tailoring a course roadmap or design strategy for you.',
+    color: '#16A34A' // Green
+  },
+  {
+    id: 3,
+    title: 'Execution',
+    desc: 'Intensive training or precise design implementation.',
+    color: '#FACC15' // Yellow
+  },
+  {
+    id: 4,
+    title: 'Success',
+    desc: 'Certification, job placement, or project delivery.',
+    color: '#6B21A8' // Purple
+  }
+];
+
 export default function ServicesPage() {
-  const services = servicesData.services;
-
-  const breadcrumbItems = [
-    { name: 'Home', url: '/' },
-    { name: 'Services', url: '/services' },
-  ];
-
   return (
-    <>
+    <div className={styles.pageContainer}>
+
+      {/* Hero Section */}
       <section className={styles.hero}>
-        <div className="container">
-          <Breadcrumb items={breadcrumbItems} />
-          <h1>Our Services</h1>
-          <p className={styles.subtitle}>
-            Comprehensive solutions for engineers and businesses in the design
-            engineering domain
-          </p>
+        <div className={styles.heroOverlay}></div>
+        <div className={styles.heroContent}>
+          <h1 className={styles.heroTitle}>Our Services</h1>
         </div>
       </section>
 
-      <section className={styles.services}>
+      {/* Services List */}
+      <section className={styles.servicesSection}>
         <div className="container">
-          <div className="grid grid-3">
-            {services.map((service) => (
-              <Card
-                key={service.id}
-                title={service.title}
-                description={service.fullDescription}
-                icon={service.icon}
-                href={`/services/${service.slug}`}
-                features={service.features}
-              />
+          <div className={styles.servicesStack}>
+            {servicesList.map((service, index) => (
+              <div key={service.id} className={`${styles.serviceCard} ${index % 2 !== 0 ? styles.reverseCard : ''}`}>
+                <div className={styles.serviceContent}>
+                  <h2 className={styles.serviceTitle}>{service.title}</h2>
+                  <div className={styles.serviceTextWrapper}>
+                    {service.description.map((para, i) => (
+                      <p key={i} className={styles.serviceText}>{para}</p>
+                    ))}
+                  </div>
+                  <Link href={service.link} className={styles.knowMoreBtn}>
+                    {service.buttonText}
+                  </Link>
+                </div>
+                <div className={styles.serviceImageWrapper}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className={styles.serviceImage}
+                  />
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className={styles.benefits}>
+      {/* Excellence Section */}
+      <section className={styles.excellenceSection}>
         <div className="container">
-          <div className="section-header">
-            <h2>Why Choose Our Services?</h2>
-            <p>
-              We deliver results through expertise, dedication, and
-              industry-aligned solutions
-            </p>
-          </div>
-          <div className={styles.benefitsGrid}>
-            <div className={styles.benefitItem}>
-              <h3>🎓 Expert Instructors</h3>
-              <p>
-                Learn from industry professionals with years of real-world
-                experience in design engineering and CAD software.
-              </p>
-            </div>
-            <div className={styles.benefitItem}>
-              <h3>🤝 Industry Connections</h3>
-              <p>
-                Access to our extensive network of 100+ partner companies for job
-                placements and project opportunities.
-              </p>
-            </div>
-            <div className={styles.benefitItem}>
-              <h3>📈 Proven Track Record</h3>
-              <p>
-                95% placement rate and hundreds of successful students working in
-                leading engineering companies.
-              </p>
-            </div>
-            <div className={styles.benefitItem}>
-              <h3>🔧 Practical Approach</h3>
-              <p>
-                Hands-on, project-based learning that prepares you for real-world
-                engineering challenges.
-              </p>
-            </div>
-            <div className={styles.benefitItem}>
-              <h3>💼 Complete Support</h3>
-              <p>
-                From training to placement, we provide end-to-end support for your
-                career development.
-              </p>
-            </div>
-            <div className={styles.benefitItem}>
-              <h3>⚡ Flexible Solutions</h3>
-              <p>
-                Customizable programs and engagement models to suit your specific
-                needs and schedule.
-              </p>
-            </div>
+          <h2 className={styles.excellenceTitle}>How We Deliver Excellence</h2>
+          <div className={styles.stepsGrid}>
+            {steps.map((step) => (
+              <div
+                key={step.id}
+                className={styles.stepCard}
+                style={{ '--borderColor': step.color }}
+              >
+                <div className={styles.stepNumber} style={{ backgroundColor: step.color }}>
+                  {step.id}
+                </div>
+                <h3 className={styles.stepTitle} style={{ color: step.color }}>{step.title}</h3>
+                <p className={styles.stepDesc}>{step.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className={styles.process}>
-        <div className="container">
-          <div className="section-header">
-            <h2>How We Work</h2>
-            <p>Our proven process for delivering exceptional results</p>
-          </div>
-          <div className={styles.processSteps}>
-            <div className={styles.processStep}>
-              <div className={styles.stepNumber}>1</div>
-              <h3>Consultation</h3>
-              <p>
-                We understand your goals, requirements, and current skill level to
-                recommend the best solution.
-              </p>
-            </div>
-            <div className={styles.processStep}>
-              <div className={styles.stepNumber}>2</div>
-              <h3>Customization</h3>
-              <p>
-                We tailor our programs and services to match your specific needs
-                and objectives.
-              </p>
-            </div>
-            <div className={styles.processStep}>
-              <div className={styles.stepNumber}>3</div>
-              <h3>Execution</h3>
-              <p>
-                We deliver high-quality training, placement support, or design
-                services with expert guidance.
-              </p>
-            </div>
-            <div className={styles.processStep}>
-              <div className={styles.stepNumber}>4</div>
-              <h3>Support</h3>
-              <p>
-                We provide ongoing support and resources to ensure your continued
-                success and growth.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
+      {/* CTA Section */}
+      <CallToAction
+        title="Ready to Start Your Journey?"
+        subtitle="Challenge yourself and begin a rewarding engineering career with us."
+        buttonText="Contact Us Today"
+        buttonLink="/#contact"
+      />
+
+    </div>
   );
 }
