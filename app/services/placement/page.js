@@ -1,7 +1,7 @@
 import { generateMetadata as generateSEOMetadata } from '@/utils/seo';
 import CallToAction from '@/components/common/CallToAction';
 import ClientsMarquee from '@/components/common/ClientsMarquee';
-import { Briefcase, Users, CheckCircle, GraduationCap } from 'lucide-react';
+import { Building2, Users, Award, IndianRupee, GraduationCap, Briefcase, CheckCircle } from 'lucide-react';
 import styles from './placement.module.css';
 
 export const metadata = generateSEOMetadata({
@@ -27,32 +27,32 @@ export default function PlacementPage() {
         <div className="container" style={{ position: 'relative', zIndex: 10 }}>
           <div className={styles.statsBar}>
             <div className={styles.statItem}>
-              <div className={`${styles.statIcon} ${styles.iconOrange}`}><Briefcase size={24} /></div>
-              <div>
+              <div className={styles.statIcon}><Building2 size={28} /></div>
+              <div className={styles.statContent}>
                 <div className={styles.statNumber}>10+</div>
                 <div className={styles.statLabel}>YEARS IN BUSINESS</div>
               </div>
             </div>
             <div className={styles.statDivider}></div>
             <div className={styles.statItem}>
-              <div className={`${styles.statIcon} ${styles.iconPurple}`}><Users size={24} /></div>
-              <div>
+              <div className={styles.statIcon}><Users size={28} /></div>
+              <div className={styles.statContent}>
                 <div className={styles.statNumber}>1000+</div>
                 <div className={styles.statLabel}>STUDENTS TRAINED</div>
               </div>
             </div>
             <div className={styles.statDivider}></div>
             <div className={styles.statItem}>
-              <div className={`${styles.statIcon} ${styles.iconGreen}`}><CheckCircle size={24} /></div>
-              <div>
+              <div className={styles.statIcon}><Award size={28} /></div>
+              <div className={styles.statContent}>
                 <div className={styles.statNumber}>90%</div>
                 <div className={styles.statLabel}>STUDENTS PLACED</div>
               </div>
             </div>
             <div className={styles.statDivider}></div>
             <div className={styles.statItem}>
-              <div className={`${styles.statIcon} ${styles.iconRed}`}><GraduationCap size={24} /></div>
-              <div>
+              <div className={styles.statIcon}><IndianRupee size={28} /></div>
+              <div className={styles.statContent}>
                 <div className={styles.statNumber}>1000+</div>
                 <div className={styles.statLabel}>CLIENTS</div>
               </div>

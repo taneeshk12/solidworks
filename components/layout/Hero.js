@@ -87,16 +87,16 @@ export default function Hero() {
                     </div>
                 </div>
 
-                {/* Stats Bar */}
-                <div className={styles.statsBarWrapper}>
-                    <div className={styles.statsBar}>
-                        {stats.map((stat, index) => (
-                            <div key={index} className={styles.statItem}>
-                                <span className={styles.statNumber}>{stat.number}</span>
-                                <span className={styles.statLabel}>{stat.label}</span>
-                            </div>
-                        ))}
-                    </div>
+            </div>
+            {/* Stats Bar */}
+            <div className={styles.statsBarWrapper}>
+                <div className={styles.statsBar}>
+                    {stats.map((stat, index) => (
+                        <div key={index} className={styles.statItem}>
+                            <span className={styles.statNumber}>{stat.number}</span>
+                            <span className={styles.statLabel}>{stat.label}</span>
+                        </div>
+                    ))}
                 </div>
             </div>
         </section>

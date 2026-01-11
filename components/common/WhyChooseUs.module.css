@@ -1,5 +1,6 @@
 .section {
-    background-color: #FFF7E8;
+    background-color: #FFEDD5;
+    /* Darker peach to match image pattern */
     padding: 6rem 0;
     font-family: var(--font-noto-sans), sans-serif;
 }
@@ -10,9 +11,9 @@
 }
 
 .heading {
-    font-size: 2.25rem;
-    font-weight: 700;
-    color: #7E22CE;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #6B21A8;
     /* purple-700 */
     margin-bottom: 1rem;
 }
@@ -23,31 +24,30 @@
     max-width: 42rem;
     margin: 0 auto;
     line-height: 1.6;
+    font-weight: 600;
 }
 
 .dividerWrapper {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     display: flex;
     justify-content: center;
 }
 
 .divider {
     height: 0.25rem;
-    width: 5rem;
+    width: 6rem;
     border-radius: 9999px;
-    background: linear-gradient(to right, #9333EA, #F97316);
-    /* purple-600 to orange-500 */
+    background: linear-gradient(to right, #6B21A8, #EA580C);
     display: block;
 }
 
 .gridContainer {
-    border: 4px solid #F97316;
+    border: 2px solid #EA580C;
     /* orange-500 */
-    border-radius: 48px;
-    padding: 2.5rem;
+    border-radius: 40px;
+    padding: 3.5rem 2.5rem;
     background-color: #fff;
-    /* Added white background inside the border specifically if needed, strictly speaking user design had transparent/mixed. Let's assume transparent or inherited from section if input didn't specify, but input had `bg-[#FFF7E8]` on section. The Grid container in original code didn't have bg, but cards did. Wait, the original code had `bg-[#FFF7E8]` on section. `bg-white` wasn't on the border container. */
-    background: transparent;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
 }
 
 .grid {

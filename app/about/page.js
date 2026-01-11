@@ -12,13 +12,14 @@ export const metadata = generateSEOMetadata({
 });
 
 const clients = [
-  "A P CLUTCHES PVT LTD.png", "BAroda hi tech.jpg", "DSS Automation.png", "ET.png",
-  "Emphetech.jpg", "Expel Prosys.jpg", "Flamertech.png", "Flexatherm.png",
-  "GBT Composites Technology Ltd..jpg", "Growell.png", "Idex.jpg", "L & T.png",
-  "Narkhede.png", "Orbit.jpg", "PAkona.png", "Popukar Switchgear.jpg",
-  "RSIS.jpg", "Rotex.jpg", "SDEC.png", "TATA_Consultancy_Services.png",
-  "Ultimate Switchgear.jpg", "UnipackTransLogo.png", "Vexma Technologies.png",
-  "Xylem.png", "moflex suspensions llp.png", "parth Kitchen.png", "schurter-logo-approved.png"
+  // Row 1
+  "Xylem.png", "Ultimate Switchgear.jpg", "schurter-logo-approved.png", "UnipackTransLogo.png", "SDEC.png", "RSIS.jpg", "Idex.jpg", "Orbit.jpg",
+  // Row 2
+  "PAkona.png", "moflex suspensions llp.png", "Rotex.jpg", "Narkhede.png", "Growell.png", "Emphetech.jpg", "ET.png", "Expel Prosys.jpg",
+  // Row 3
+  "A P CLUTCHES PVT LTD.png", "Vexma Technologies.png", "parth Kitchen.png", "Popukar Switchgear.jpg", "DSS Automation.png", "GBT Composites Technology Ltd..jpg", "Flexatherm.png", "Flamertech.png",
+  // Row 4
+  "TATA_Consultancy_Services.png", "L & T.png", "BAroda hi tech.jpg"
 ];
 
 const glimpses = [
@@ -79,7 +80,7 @@ export default function AboutPage() {
       {/* Vision Section */}
       <section className={`${styles.splitSection} ${styles.altBg}`}>
         <div className="container">
-          <div className={`${styles.splitGrid} ${styles.reverseGrid}`}>
+          <div className={styles.splitGrid}>
             <div className={styles.textContent}>
               <h2 className={styles.splitTitle}>Our Vision</h2>
               <p>

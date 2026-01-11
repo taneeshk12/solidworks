@@ -7,13 +7,16 @@
 /* Hero Section */
 .hero {
     position: relative;
-    height: 350px;
+    height: 450px;
+    /* Increased height to match image proportion */
     background-image: url('/services/placements.png');
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-bottom: 80px;
+    /* Space for the overlapping stats bar */
 }
 
 .heroOverlay {
@@ -22,7 +25,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(234, 88, 12, 0.9) 0%, rgba(107, 33, 168, 0.8) 100%);
+    background: linear-gradient(135deg, rgba(255, 107, 0, 0.85) 0%, rgba(88, 28, 135, 0.9) 100%);
 }
 
 .heroContent {
@@ -33,29 +36,33 @@
 }
 
 .heroTitle {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 /* Stats Bar */
 .statsContainer {
-    margin-top: -60px;
-    /* Float over Hero */
+    margin-top: -100px;
+    /* More overlap as seen in design */
     margin-bottom: 4rem;
-    padding: 0 1rem;
+    padding: 0 2rem;
 }
 
 .statsBar {
     background: white;
     border-radius: 12px;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem 2rem;
+    border: 3px solid #ff6b00;
+    /* Vibrant orange border from image */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
+    flex-wrap: nowrap;
+    /* Keep them in a row */
 }
 
 .statItem {
@@ -68,14 +75,11 @@
 }
 
 .statIcon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    /* background-color: #F3F4F6; */
+    color: #ff6b00;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
 }
 
 .iconOrange {
@@ -99,17 +103,22 @@
 }
 
 .statNumber {
-    font-size: 1.5rem;
+    font-size: 2.25rem;
     font-weight: 800;
-    color: #3733A0;
+    color: #5d2a9d;
+    /* Deep purple from image */
+    line-height: 1;
+    margin-bottom: 0.25rem;
 }
 
 .statLabel {
     font-size: 0.75rem;
-    font-weight: 700;
-    color: #6B7280;
+    font-weight: 800;
+    color: #EA580C;
+    /* More vibrant orange for labels */
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    white-space: nowrap;
 }
 
 .statDivider {
@@ -326,41 +335,52 @@
 }
 
 /* Responsive */
+@media (max-width: 1100px) {
+    .heroTitle {
+        font-size: 3rem;
+    }
+}
+
 @media (max-width: 900px) {
     .statDivider {
         display: none;
     }
 
-    .statItem {
-        width: 45%;
-        border-bottom: 1px solid #f3f3f3;
-        padding-bottom: 1rem;
+    .statsBar {
+        flex-wrap: wrap;
+        padding: 2rem 1rem;
     }
 
-    .statItem:last-child {
-        border-bottom: none;
+    .statItem {
+        width: 45%;
     }
 }
 
 @media (max-width: 600px) {
+    .hero {
+        height: 350px;
+        padding-bottom: 40px;
+    }
+
     .heroTitle {
         font-size: 2.25rem;
     }
 
+    .statsContainer {
+        margin-top: -60px;
+    }
+
     .statsBar {
         flex-direction: column;
-        align-items: stretch;
+        align-items: center;
+        gap: 2rem;
     }
 
     .statItem {
         width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        text-align: left;
     }
 
     .statNumber {
-        font-size: 1.25rem;
+        font-size: 1.75rem;
     }
 }

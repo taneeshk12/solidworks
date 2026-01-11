@@ -7,7 +7,7 @@ import {
     GraduationCap,
     Globe,
     BookOpen,
-    Handshake,
+    Users2,
     Users,
     MonitorPlay,
 } from "lucide-react";
@@ -15,18 +15,18 @@ import styles from "./WhyChooseUs.module.css";
 
 const features = [
     {
-        title: "SolidWorks Authorised Partner",
-        icon: BadgeCheck, // Using BadgeCheck as close match
+        title: "Solidworks Authorised Partner",
+        icon: BadgeCheck,
         variant: "orange",
     },
     {
-        title: "Training Experience of 10+ Years",
+        title: "Training Experience of 10+ years",
         icon: Award,
         variant: "yellow",
     },
     {
         title: "Training with Licensed Software",
-        icon: Laptop, // Laptop2 is usually just Laptop in lucide imports or need to check specific version, sticking to Laptop for safety or could try Laptop2 if sure. Lucide usually has Laptop.
+        icon: Laptop,
         variant: "purple",
     },
     {
@@ -35,13 +35,13 @@ const features = [
         variant: "yellow",
     },
     {
-        title: "SolidWorks Certified Faculties",
+        title: "Solidworks Certified Faculties",
         icon: GraduationCap,
         variant: "blue",
     },
     {
         title: "International Certification",
-        icon: Globe,
+        icon: Award,
         variant: "orange",
     },
     {
@@ -50,17 +50,17 @@ const features = [
         variant: "yellow",
     },
     {
-        title: "1000+ Industry Connections for Placements",
-        icon: Handshake,
+        title: "1000+ industry connections for placements",
+        icon: Users2,
         variant: "purple",
     },
     {
-        title: "Industry Ready Curriculum", // Duplicate title in user input? Keeping as is.
-        icon: Users,
+        title: "Practical Oriented Training",
+        icon: BookOpen,
         variant: "yellow",
     },
     {
-        title: "Offline & Mentored Online Training",
+        title: "Offline and Mentored Online Training",
         icon: MonitorPlay,
         variant: "blue",
     },
