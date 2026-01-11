@@ -39,3 +39,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# unused images
+public/contact_hero.jpeg
+public/gallery.jpeg
+public/services_hero.jpeg
+public/testimonials_hero.jpeg
+public/file.svg
+public/globe.svg
+public/next.svg
+public/vercel.svg
+public/window.svg
