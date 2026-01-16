@@ -13,7 +13,7 @@ const servicesList = [
   {
     id: 'solidworks-training',
     title: 'SolidWorks Training',
-    image: '/services/training.png',
+    image: '/services/training.jpeg',
     description: [
       "We are Authorized Training Centre for SOLIDWORKS - Dassault Systemes, S.A France.",
       "Our SOLIDWORKS training delivers hands-on experience in concept planning, design visualization, 3D modeling, and production-ready engineering drawings.",
@@ -39,7 +39,7 @@ const servicesList = [
   {
     id: 'design-services',
     title: 'Design Services & Manpower supply',
-    image: '/services/3d .png',
+    image: '/services/3d.jpeg',
     description: [
       "We provide professional 3D design, CAD/CAM job work and design manpower supply services for mechanical and industrial projects. Our team delivers high-precision modeling, detailed drafting, and skilled design resources to support design projects with industry standards.",
       "From concept development to manufacturing-ready drawings and reliable design manpower support, we ensure innovative, accurate, and reliable design solutions delivered on time."
@@ -66,7 +66,7 @@ const steps = [
     id: 3,
     title: 'Execution',
     desc: 'Intensive training or precise design implementation.',
-    color: '#FACC15' // Yellow
+    color: '#CA8A04' // Darker Yellow for contrast
   },
   {
     id: 4,
@@ -86,6 +86,11 @@ export default function ServicesPage() {
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>Our Services</h1>
         </div>
+        <img
+          src="/solidworks-autho-centre.jpg"
+          alt="Authorized Training Centre"
+          className={styles.heroAuthLogo}
+        />
       </section>
 
       {/* Services List */}
@@ -93,7 +98,11 @@ export default function ServicesPage() {
         <div className="container">
           <div className={styles.servicesStack}>
             {servicesList.map((service, index) => (
-              <div key={service.id} className={`${styles.serviceCard} ${index % 2 !== 0 ? styles.reverseCard : ''}`}>
+              <div
+                key={service.id}
+                className={`${styles.serviceCard} ${index % 2 !== 0 ? styles.reverseCard : ''}`}
+                style={{ backgroundColor: index % 2 === 0 ? '#FFF8E7' : '#FFE3CB' }}
+              >
                 <div className={styles.serviceContent}>
                   <h2 className={styles.serviceTitle}>{service.title}</h2>
                   <div className={styles.serviceTextWrapper}>

@@ -20,6 +20,11 @@ export default function PlacementPage() {
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>Placement Assistance Program</h1>
         </div>
+        <img
+          src="/solidworks-autho-centre.jpg"
+          alt="Authorized Training Centre"
+          className={styles.heroAuthLogo}
+        />
       </section>
 
       {/* Stats Bar */}
@@ -63,19 +68,17 @@ export default function PlacementPage() {
 
       {/* Description Section */}
       <section className={styles.descSection}>
-        <div className="container">
-          <div className={styles.descBox}>
-            <p>
-              We bridge the gap between education and employment by delivering industry-focused, job-oriented training in the CAD / CAM. Beyond technical skill development, we provide end-to-end career support—including placement guidance, interview preparation, and professional mentorship—to help students build confidence and launch successful careers in engineering, design, and manufacturing.
-            </p>
-            <p>
-              We offer exciting internship opportunities for engineering students and professionals, designed to build strong practical and industry-ready skills.
-              We actively mentor final-semester engineering students on their academic projects, providing hands-on guidance, real-world engineering exposure, and a clear connection between theoretical concepts and industry applications.
-            </p>
-            <p>
-              Additionally, we provide internship and placement assistance to engineers and working professionals through our network of 1000+ associated and renowned client companies, helping candidates unlock meaningful career opportunities and industry roles.
-            </p>
-          </div>
+        <div className={styles.descBox}>
+          <p>
+            We bridge the gap between education and employment by delivering industry-focused, job-oriented training in the CAD / CAM. Beyond technical skill development, we provide end-to-end career support—including placement guidance, interview preparation, and professional mentorship—to help students build confidence and launch successful careers in engineering, design, and manufacturing.
+          </p>
+          <p>
+            We offer exciting internship opportunities for engineering students and professionals, designed to build strong practical and industry-ready skills.
+            We actively mentor final-semester engineering students on their academic projects, providing hands-on guidance, real-world engineering exposure, and a clear connection between theoretical concepts and industry applications.
+          </p>
+          <p>
+            Additionally, we provide internship and placement assistance to engineers and working professionals through our network of 1000+ associated and renowned client companies, helping candidates unlock meaningful career opportunities and industry roles.
+          </p>
         </div>
       </section>
 
@@ -117,9 +120,9 @@ export default function PlacementPage() {
 
       {/* Trusted By Section */}
       <section className={styles.trustedSection}>
-        <div className="container">
+        {/* <div className="container">
           <h4 className={styles.trustedTitle}>TRUSTED BY INDUSTRY LEADERS</h4>
-        </div>
+        </div> */}
         <ClientsMarquee />
       </section>
 

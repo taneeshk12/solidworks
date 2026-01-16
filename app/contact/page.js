@@ -20,6 +20,11 @@ export default function ContactPage() {
                 <div className={styles.heroContent}>
                     <h1 className={styles.heroTitle}>Contact Us</h1>
                 </div>
+                <img
+                    src="/solidworks-autho-centre.jpg"
+                    alt="Authorized Training Centre"
+                    className={styles.heroAuthLogo}
+                />
             </section>
 
             {/* Contact Content */}
@@ -50,11 +55,11 @@ export default function ContactPage() {
                                     <div className={styles.infoItem}>
                                         <div className={styles.iconBox}><MapPin size={24} /></div>
                                         <div>
-                                            <h3 className={styles.infoLabel}>glimpses</h3>
+                                            <h3 className={styles.infoLabel}>Our Office</h3>
                                             <p className={styles.infoText}>
                                                 8th Floor, Yashkamal Building, 802,<br />
-                                                opp. Faculty Of Arts, Sayajiganj,<br />
-                                                Vadodara, Gujarat 390005
+                                                opp. KalaGhoda, Sayajiganj,<br />
+                                                Vadodara, Gujarat 390020
                                             </p>
                                         </div>
                                     </div>
@@ -63,7 +68,7 @@ export default function ContactPage() {
                                         <div className={styles.iconBox}><Phone size={24} /></div>
                                         <div>
                                             <h3 className={styles.infoLabel}>Call Us</h3>
-                                            <p className={styles.infoText}>+91 93762 11272</p>
+                                            <p className={styles.infoText}>+91 83209 77346 </p>
                                             <p className={styles.infoSubText}>Mon-Sat from 9am to 6pm</p>
                                         </div>
                                     </div>
@@ -72,7 +77,7 @@ export default function ContactPage() {
                                         <div className={styles.iconBox}><Mail size={24} /></div>
                                         <div>
                                             <h3 className={styles.infoLabel}>Email Us</h3>
-                                            <p className={styles.infoText}>info@solidworksinstitute.com</p>
+                                            <p className={styles.infoText}>solidworks.trainingcentre@gmail.com</p>
                                             <p className={styles.infoSubText}>We reply within 24 hours</p>
                                         </div>
                                     </div>
@@ -82,11 +87,11 @@ export default function ContactPage() {
                             <div className={styles.socialSection}>
                                 <p className={styles.socialLabel}>Follow on our socials</p>
                                 <div className={styles.socialIcons}>
-                                    <a href="#" className={styles.socialLink}><Instagram size={24} /></a>
-                                    <a href="#" className={styles.socialLink}><Phone size={24} /></a> {/* WhatsApp usually represented by phone or message circle if Brand icon not available, using Phone for consistency or MessageCircle? Design shows Whatsapp logo. Lucide has MessageCircle or standard icons only. Will stick to available ones or SVG if needed. Used Phone as placeholder or check if MessageCircle is better.. Actually I remember Lucide has no Brand icons. Footer uses custom SVGs or specific imports. I'll use text or generic for now */}
+                                    <a href="https://www.instagram.com/solidworks_authorised_center?igsh=eG94d2w5M2tjemQ2" className={styles.socialLink}><Instagram size={24} /></a>
+                                    <a href="+91 83209 77346" className={styles.socialLink}><Phone size={24} /></a> {/* WhatsApp usually represented by phone or message circle if Brand icon not available, using Phone for consistency or MessageCircle? Design shows Whatsapp logo. Lucide has MessageCircle or standard icons only. Will stick to available ones or SVG if needed. Used Phone as placeholder or check if MessageCircle is better.. Actually I remember Lucide has no Brand icons. Footer uses custom SVGs or specific imports. I'll use text or generic for now */}
                                     {/* Re-checking footer implementation for consistent icons */}
                                     <a href="#" className={styles.socialLink}><Mail size={24} /></a>
-                                    <a href="#" className={styles.socialLink}><Linkedin size={24} /></a>
+                                    <a href="http://www.linkedin.com/in/solidworks-authorized-training-services-center-vadodara" className={styles.socialLink}><Linkedin size={24} /></a>
                                     <a href="#" className={styles.socialLink}><Facebook size={24} /></a>
                                 </div>
                             </div>

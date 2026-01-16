@@ -30,9 +30,9 @@ const reviews = [
     },
 ];
 
-export default function Testimonials() {
+export default function Testimonials({ className }) {
     return (
-        <section className={styles.section}>
+        <section className={`${styles.section} ${className || ''}`}>
             <div className="container">
                 <div className={styles.header}>
                     <h2 className={styles.heading}>Testimonials</h2>
@@ -63,9 +63,9 @@ export default function Testimonials() {
                                     <span className={styles.authorName}>{review.name}</span>
                                 </div>
 
-                                <div className={styles.readMore}>
+                                {/* <div className={styles.readMore}>
                                     Read Full Review →
-                                </div>
+                                </div> */}
                             </div>
                         ))}
                     </div>
@@ -85,7 +85,7 @@ export default function Testimonials() {
                 </div>
 
                 <div className={styles.footer}>
-                    <Button href="/testimonials" variant="outline">
+                    <Button href="/testimonials" variant="purple">
                         View All Reviews
                     </Button>
                 </div>

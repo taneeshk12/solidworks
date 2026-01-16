@@ -67,17 +67,15 @@ export default function Footer() {
               <div className={styles.contactItem}>
                 <MapPin className={styles.icon} size={20} />
                 <p>
-                  8th Floor, Yashkamal Building, 802, opp. faculty Of
-                  Arts, Sayajiganj, Vadodara, Gujarat 390005
-                </p>
+                  802, 8th Floor, Yashkamal Building, Opp Kalaghoda, Sayajiganj, Vadodara, Gujarat - 390020                </p>
               </div>
               <div className={styles.contactItem}>
                 <Phone className={styles.icon} size={20} />
-                <a href="tel:09376211272">093762 11272</a>
+                <a href="tel:09376211272">+91 8320977346 </a>
               </div>
               <div className={styles.contactItem}>
                 <Mail className={styles.icon} size={20} />
-                <a href="mailto:admissions@sw-institute.com">admissions@sw-institute.com</a>
+                <a href="mailto:admissions@sw-institute.com">solidworks.trainingcentre@gmail.com</a>
               </div>
             </div>
           </div>
@@ -89,12 +87,11 @@ export default function Footer() {
           </p>
 
           <div className={styles.social}>
-            <a href="#" aria-label="Instagram"><Instagram size={24} /></a>
-            <a href="https://wa.me/919376211272" aria-label="WhatsApp"><Phone size={24} /></a> {/* Using Phone as generic replacement if MessageCircle not available, but Lucide has MessageCircle/Phone */}
-            <a href="mailto:admissions@sw-institute.com" aria-label="Email"><Mail size={24} /></a>
-            <a href="#" aria-label="LinkedIn"><Linkedin size={24} /></a>
+            <a href="https://www.instagram.com/solidworks_authorised_center?igsh=eG94d2w5M2tjemQ2" aria-label="Instagram"><Instagram size={24} /></a>
+            <a href="https://wa.me/+918320977346 " aria-label="WhatsApp"><Phone size={24} /></a> {/* Using Phone as generic replacement if MessageCircle not available, but Lucide has MessageCircle/Phone */}
+            <a href="mailto:solidworks.trainingcentre@gmail.com" aria-label="Email"><Mail size={24} /></a>
+            <a href="www.linkedin.com/in/solidworks-authorized-training-services-center-vadodara" aria-label="LinkedIn"><Linkedin size={24} /></a>
             <a href="#" aria-label="Facebook"><Facebook size={24} /></a>
-            <a href="#" aria-label="X"><Twitter size={24} /></a>
           </div>
 
           <p className={styles.credits}>

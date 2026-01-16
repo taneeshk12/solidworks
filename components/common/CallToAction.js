@@ -2,9 +2,9 @@ import Link from 'next/link';
 import styles from './CallToAction.module.css';
 
 export default function CallToAction({
-    title = "Ready to Accelerate Your Engineering Career?",
-    subtitle = "Join the ranks of certified professionals.",
-    buttonText = "View All Courses",
+    title = "Ready to Start Your Journey?",
+    subtitle = "Join thousands of successful engineers who started their career with us. Visit our campus or book a free counseling session today.",
+    buttonText = "View Courses",
     buttonLink = "/services",
     secondaryButtonText = null,
     secondaryButtonLink = "/#contact",

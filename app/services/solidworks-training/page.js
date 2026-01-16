@@ -61,6 +61,11 @@ export default function SolidWorksTrainingPage() {
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>Solidworks Training</h1>
         </div>
+        <img
+          src="/solidworks-autho-centre.jpg"
+          alt="Authorized Training Centre"
+          className={styles.heroAuthLogo}
+        />
       </section>
 
       {/* Intro Section */}

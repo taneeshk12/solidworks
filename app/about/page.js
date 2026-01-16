@@ -37,20 +37,25 @@ export default function AboutPage() {
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>About Our Institute</h1>
         </div>
+        <img
+          src="/solidworks-autho-centre.jpg"
+          alt="Authorized Training Centre"
+          className={styles.heroAuthLogo}
+        />
       </section>
 
-      {/* Intro Section */}
-      <section className={styles.introSection}>
+      {/* Intro Section - Cream */}
+      <section className={`${styles.introSection} ${styles.creamBg}`}>
         <div className="container">
           <h2 className={styles.sectionTitle}>
             Shaping the Future <span className={styles.highlightText}>of Design Engineering</span>
           </h2>
           <div className={styles.introContent}>
             <p>
-              We are a recognized training organization dedicated to providing comprehensive education and professional services in SOLIDWORKS, a powerful solid modeling CAD (Computer-Aided Design) and CAE (Computer-Aided Engineering) software platform widely adopted across the design and manufacturing industries.
+              We are a recognized training organization dedicated to providing comprehensive education and professional services in SOLIDWORKS, a powerful solid modeling CAD (Computer-Aided Design), CAE (Computer-Aided Engineering), and 3D Printing platform widely adopted across the design and manufacturing industries.
             </p>
             <p>
-              Our curriculum is carefully structured to meet current industry standards and technological advancements, offering industry-focused courses for designers, engineers, and architects in the fields of Mechanical, Electrical, Automotive, Robotics, Mechatronics, and Aeronautical Engineering.
+              Our curriculum is carefully structured to meet current industry standards and technological advancements, offering industry-focused courses for designers, engineers, and architects in the fields of Mechanical, Electrical, Automotive, Robotics, Mechatronics  and Aeronautical Engineering.
             </p>
             <p>
               Through practical learning and expert guidance, we aim to bridge the gap between academic knowledge and industrial application.
@@ -59,8 +64,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Mission Section */}
-      <section className={styles.splitSection}>
+      {/* Mission Section - Peach */}
+      <section className={`${styles.splitSection} ${styles.peachBg}`}>
         <div className="container">
           <div className={styles.splitGrid}>
             <div className={styles.imageWrapper}>
@@ -77,8 +82,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Vision Section */}
-      <section className={`${styles.splitSection} ${styles.altBg}`}>
+      {/* Vision Section - Cream */}
+      <section className={`${styles.splitSection} ${styles.creamBg}`}>
         <div className="container">
           <div className={styles.splitGrid}>
             <div className={styles.textContent}>
@@ -95,11 +100,11 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <WhyChooseUs />
+      {/* Why Choose Us - Peach */}
+      <WhyChooseUs className={styles.peachBg} />
 
-      {/* Our Clients */}
-      <section className={styles.clientsSection}>
+      {/* Our Clients - Cream */}
+      <section className={`${styles.clientsSection} ${styles.creamBg}`}>
         <div className="container">
           <h2 className={styles.sectionTitleCenter}>Our Clients</h2>
           <div className={styles.clientsGrid}>
@@ -117,8 +122,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Glimpses */}
-      <section className={styles.glimpsesSection}>
+      {/* Glimpses - Peach */}
+      <section className={`${styles.glimpsesSection} ${styles.peachBg}`}>
         <div className="container">
           <h2 className={styles.sectionTitleCenter}>Glimpses of Our Center</h2>
           <div className={styles.glimpsesGrid}>

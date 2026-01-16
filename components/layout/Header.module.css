@@ -79,7 +79,7 @@
 
 /* Logo */
 .logo img {
-  height: 56px;
+  height: 70px;
   width: auto;
 }
 
@@ -89,6 +89,7 @@
   display: flex;
   gap: 40px;
   font-size: 18px;
+  font-family: var(--font-noto-sans), sans-serif;
   font-weight: 500;
   margin-left: auto;
   margin-right: 30px;
@@ -131,6 +132,15 @@
   background-color: #c94a06;
 }
 
+.desktopCta {
+  display: block;
+}
+
+.mobileCta {
+  display: none;
+  margin-top: 20px;
+}
+
 /* Dropdown Styles */
 .dropdownParent {
   position: relative;
@@ -143,6 +153,7 @@
   display: flex;
   align-items: center;
   gap: 4px;
+  cursor: pointer;
 }
 
 .dropdownMenu {
@@ -159,9 +170,7 @@
   gap: 0;
   z-index: 200;
   list-style: none;
-  /* Ensure no bullets */
   margin: 0;
-  /* Reset margin */
 }
 
 .dropdownParent:hover .dropdownMenu {
@@ -171,7 +180,6 @@
 .dropdownMenu li {
   width: 100%;
   margin: 0;
-  /* Reset margin from general nav li if any */
   padding: 0;
 }
 
@@ -180,14 +188,118 @@
   padding: 10px 20px;
   font-size: 16px;
   color: #374151;
-  /* Dark gray */
   white-space: normal;
-  /* Allow text wrap for long items */
   line-height: 1.4;
 }
 
 .dropdownMenu li a:hover {
   background-color: #FFF7ED;
-  /* Light orange bg */
   color: #EA580C;
+}
+
+/* Mobile Adjustments */
+.mobileMenuBtn {
+  display: none;
+  background: none;
+  border: none;
+  color: #6B21A8;
+  cursor: pointer;
+  padding: 8px;
+  margin-left: auto;
+}
+
+@media (max-width: 1024px) {
+  .navbarContainer {
+    padding: 12px 20px;
+  }
+
+  .navMenu {
+    gap: 20px;
+    font-size: 16px;
+  }
+
+  .ctaButton {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .brandName {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 900px) {
+  .topBar {
+    display: none;
+    /* Hide top bar on mobile for cleaner look */
+  }
+
+  .mobileMenuBtn {
+    display: block;
+  }
+
+  .desktopCta {
+    display: none;
+  }
+
+  .logo img {
+    height: 50px;
+  }
+
+  .brandName {
+    font-size: 16px;
+  }
+
+  .navMenu {
+    position: fixed;
+    top: 74px;
+    /* Adjust based on header height */
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 74px);
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    margin: 0;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    gap: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .navMenu.mobileVisible {
+    left: 0;
+  }
+
+  .dropdownParent {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .dropdownMenu {
+    position: static;
+    box-shadow: none;
+    display: none;
+    width: 100%;
+    align-items: center;
+    padding: 10px 0;
+    background-color: #FFF7ED;
+  }
+
+  .dropdownParent:hover .dropdownMenu,
+  .dropdownParent:active .dropdownMenu {
+    display: flex;
+  }
+
+  .mobileCta {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .brandName {
+    display: none;
+    /* Hide brand name text on very small screens to keep logo */
+  }
 }

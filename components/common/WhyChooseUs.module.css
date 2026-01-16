@@ -16,6 +16,7 @@
     color: #6B21A8;
     /* purple-700 */
     margin-bottom: 1rem;
+    font-family: var(--font-space-grotesk), sans-serif;
 }
 
 .subheading {
@@ -24,7 +25,8 @@
     max-width: 42rem;
     margin: 0 auto;
     line-height: 1.6;
-    font-weight: 600;
+    font-weight: 400;
+    font-family: var(--font-noto-sans), sans-serif;
 }
 
 .dividerWrapper {
@@ -77,7 +79,7 @@
 .card {
     border-width: 1px;
     border-style: solid;
-    border-radius: 1rem;
+    border-radius: 20px;
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
@@ -85,6 +87,9 @@
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease;
+    min-height: 172px;
+    position: relative;
+    box-sizing: border-box;
 }
 
 .card:hover {
@@ -93,10 +98,12 @@
 }
 
 .iconWrapper {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 64px;
+    height: 64px;
     border-radius: 9999px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-width: 1px;
+    border-style: solid;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -109,25 +116,28 @@
 }
 
 .cardTitle {
-    font-size: 0.875rem;
-    font-weight: 600;
+    font-family: var(--font-space-grotesk), sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    text-align: center;
     transition: color 0.3s ease;
-}
-
-.card:hover .cardTitle {
-    color: black;
 }
 
 /* Variants */
 
 /* Orange */
 .orange {
-    background-color: #FFEDD5;
-    /* orange-100 */
-    border-color: #FB923C;
-    /* orange-400 */
+    background: rgba(234, 88, 12, 0.35);
+    border-color: #EA580C;
     color: #EA580C;
-    /* orange-600 */
+}
+
+.orange .iconWrapper {
+    border-color: #EA580C;
 }
 
 .orange .icon {
@@ -138,58 +148,61 @@
     color: #EA580C;
 }
 
-/* Yellow */
+/* Yellow (Maps to the Gold/Amber style) */
 .yellow {
-    background-color: #FEF9C3;
-    /* yellow-100 */
-    border-color: #FACC15;
-    /* yellow-400 */
-    color: #A16207;
-    /* yellow-700 */
+    background: radial-gradient(50% 50% at 50% 50%, rgba(197, 157, 95, 0.35) 0%, rgba(245, 158, 11, 0.35) 100%);
+    border-color: #C59D5F;
+    color: #985D00;
+}
+
+.yellow .iconWrapper {
+    border-color: #C59D5F;
 }
 
 .yellow .icon {
-    color: #A16207;
+    color: #C59D5F;
 }
 
 .yellow .cardTitle {
-    color: #A16207;
+    color: #985D00;
 }
 
 /* Purple */
 .purple {
-    background-color: #F3E8FF;
-    /* purple-100 */
-    border-color: #C084FC;
-    /* purple-400 */
-    color: #7E22CE;
-    /* purple-700 */
+    background: radial-gradient(50% 50% at 50% 50%, rgba(58, 2, 104, 0.2) 0%, rgba(107, 33, 168, 0.2) 100%);
+    border-color: #6B21A8;
+    color: #6B21A8;
+}
+
+.purple .iconWrapper {
+    border-color: #6B21A8;
 }
 
 .purple .icon {
-    color: #7E22CE;
+    color: #6B21A8;
 }
 
 .purple .cardTitle {
-    color: #7E22CE;
+    color: #6B21A8;
 }
 
 /* Blue */
 .blue {
-    background-color: #DBEAFE;
-    /* blue-100 */
-    border-color: #60A5FA;
-    /* blue-400 */
-    color: #1D4ED8;
-    /* blue-700 */
+    background: radial-gradient(50% 50% at 50% 50%, rgba(47, 203, 255, 0.35) 0%, rgba(26, 115, 232, 0.35) 37.5%);
+    border-color: #001F5B;
+    color: #001F5B;
+}
+
+.blue .iconWrapper {
+    border-color: #001F5B;
 }
 
 .blue .icon {
-    color: #1D4ED8;
+    color: #001F5B;
 }
 
 .blue .cardTitle {
-    color: #1D4ED8;
+    color: #001F5B;
 }
 
 /* Responsive adjustments */
@@ -202,9 +215,5 @@
         padding: 1.5rem;
         border-width: 2px;
         border-radius: 24px;
-    }
-
-    .cardTitle {
-        font-size: 1rem;
     }
 }

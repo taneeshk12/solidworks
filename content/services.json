@@ -3,17 +3,17 @@
     {
       "id": "solidworks-training",
       "title": "SolidWorks Training",
-      "shortDescription": "Master SolidWorks with industry-expert instructors and hands-on projects.",
+      "shortDescription": "Industry focussed SOLIDWORKS training programs aligned with global certifications",
       "fullDescription": "Our comprehensive SolidWorks training program is designed for both beginners and professionals looking to enhance their CAD skills. Learn from certified instructors with real-world industry experience.",
       "slug": "solidworks-training",
       "icon": "🎓",
       "features": [
-        "Industry-certified instructors",
-        "Hands-on project-based learning",
-        "Beginner to advanced levels",
-        "Latest SolidWorks version training",
-        "Certificate upon completion",
-        "Job-oriented curriculum"
+        "CAD",
+        "CAM",
+        "Simulation",
+        "Analysis",
+        "Fluid Dynamics",
+        "3D Printing"
       ],
       "benefits": [
         "Increase your employability in design engineering",
@@ -26,18 +26,16 @@
     },
     {
       "id": "placement",
-      "title": "Placement Services",
-      "shortDescription": "Connect with top engineering companies and launch your career in design.",
+      "title": "Placement",
+      "shortDescription": "Career oriented training combined with placement support",
       "fullDescription": "Our placement services bridge the gap between talented engineers and leading companies. We provide comprehensive support including resume building, interview preparation, and direct connections with hiring companies.",
       "slug": "placement",
       "icon": "💼",
       "features": [
-        "Direct connections with 100+ companies",
-        "Resume building and optimization",
-        "Mock interviews and feedback",
-        "Skill assessment and gap analysis",
-        "Career counseling sessions",
-        "Post-placement support"
+        "Career Support",
+        "Internship",
+        "Placement",
+        "Mentorship"
       ],
       "benefits": [
         "Access to exclusive job opportunities",
@@ -50,18 +48,17 @@
     },
     {
       "id": "design-services-manpower",
-      "title": "Design Services & Manpower",
-      "shortDescription": "Expert design engineering resources and outsourcing solutions for your business.",
+      "title": "Design Services and Manpower Supply",
+      "shortDescription": "Professional 3D design, CAD/CAM job work and design manpower supply services for mechanical and industrial projects.",
       "fullDescription": "We provide skilled design engineering professionals and comprehensive outsourcing solutions to help your business scale efficiently. Our vetted engineers bring expertise in CAD, product design, and manufacturing.",
       "slug": "design-services-manpower",
       "icon": "🏭",
       "features": [
-        "Skilled CAD engineers on demand",
-        "Product design and development",
-        "2D to 3D conversion services",
-        "Manufacturing drawing creation",
-        "Quality assurance and review",
-        "Flexible engagement models"
+        "2D Drafting & GD&T",
+        "3D CAD Modeling",
+        "Reverse Engineering",
+        "Product & Sheet Metal Design",
+        "3D Printing & Prototyping"
       ],
       "benefits": [
         "Reduce operational costs",

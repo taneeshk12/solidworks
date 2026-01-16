@@ -39,6 +39,17 @@
   background: #f0f7ff;
 }
 
+.purple {
+  background: #6B21A8;
+  color: #fff;
+}
+
+.purple:hover:not(:disabled) {
+  background: #581c87;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(107, 33, 168, 0.3);
+}
+
 .outline {
   background: transparent;
   color: #333;

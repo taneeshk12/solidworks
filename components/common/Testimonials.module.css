@@ -4,6 +4,7 @@
     padding: 6rem 0;
     position: relative;
     overflow: hidden;
+    font-family: var(--font-noto-sans), sans-serif;
 }
 
 .header {
@@ -14,14 +15,16 @@
 .heading {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #7E22CE;
-    /* Purple heading */
+    color: #6B21A8;
+    /* Brand Purple */
     margin-bottom: 1rem;
+    font-family: var(--font-space-grotesk), sans-serif;
 }
 
 .subheading {
     color: #4B5563;
     margin-bottom: 1.5rem;
+    font-family: var(--font-noto-sans), sans-serif;
 }
 
 .dividerWrapper {
@@ -32,7 +35,7 @@
 .divider {
     height: 4px;
     width: 60px;
-    background: linear-gradient(to right, #7E22CE, #F59E0B);
+    background: linear-gradient(to right, #6B21A8, #EA580C);
     border-radius: 2px;
 }
 
@@ -65,6 +68,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    font-family: var(--font-noto-sans), sans-serif;
 }
 
 .card:hover {
@@ -72,10 +76,10 @@
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-/* Default Card (Purple) */
+/* Default Card (Purple 70% Opacity) */
 .cardDefault {
-    background-color: #9333EA;
-    /* Medium Purple */
+    background-color: rgba(107, 33, 168, 0.7);
+    /* #6B21A8 with 70% opacity */
     color: white;
 }
 
@@ -98,9 +102,7 @@
 
 /* Highlighted Card (White with Orange Border) */
 .cardHighlight {
-    background-color: #FFF7E8;
-    /* Matching section bg or slightly lighter/white */
-    background: white;
+    background-color: white;
     border: 4px solid #EA580C;
     /* Orange border */
     color: #374151;
@@ -121,19 +123,24 @@
 }
 
 .cardHighlight .quoteIcon {
-    color: rgba(0, 0, 0, 0.1);
+    color: #EA580C;
+    opacity: 0.2;
 }
 
 .cardHighlight .readMore {
-    color: #374151;
+    color: #EA580C;
     font-weight: 600;
 }
 
+.cardHighlight .authorName {
+    color: #EA580C;
+}
+
 .avatarHighlight {
-    background-color: white;
-    color: #374151;
-    border: 1px solid #E5E7EB;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    background-color: #EA580C;
+    color: white;
+    border: 2px solid #EA580C;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .quoteIcon {
@@ -188,7 +195,7 @@
     position: absolute;
     bottom: -20px;
     right: 0;
-    background-color: #7E22CE;
+    background-color: #6B21A8;
     /* Purple */
     padding: 1rem 1.5rem;
     border-radius: 12px;
@@ -201,9 +208,9 @@
 }
 
 .ratingScore {
-    background-color: #FACC15;
-    /* Yellow */
-    color: #7E22CE;
+    background-color: #EA580C;
+    /* Orange */
+    color: white;
     font-weight: 800;
     width: 48px;
     height: 48px;

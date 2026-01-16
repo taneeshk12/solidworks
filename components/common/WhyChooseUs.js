@@ -66,9 +66,9 @@ const features = [
     },
 ];
 
-export default function WhyChooseUs() {
+export default function WhyChooseUs({ className }) {
     return (
-        <section className={styles.section}>
+        <section className={`${styles.section} ${className || ''}`}>
             <div className="container">
                 {/* Heading */}
                 <div className={styles.header}>

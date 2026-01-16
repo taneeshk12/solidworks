@@ -36,8 +36,9 @@
   font-size: 1.5rem;
   margin-bottom: 1rem;
   color: #333;
-  font-weight: 600;
+  font-weight: 700;
   transition: color 0.3s ease;
+  font-family: var(--font-noto-sans), sans-serif;
 }
 
 .description {
@@ -46,6 +47,7 @@
   margin-bottom: 1.5rem;
   font-size: 0.9375rem;
   transition: color 0.3s ease;
+  font-family: var(--font-noto-sans), sans-serif;
 }
 
 .features {
@@ -55,6 +57,7 @@
   color: #666;
   font-size: 0.875rem;
   transition: color 0.3s ease;
+  font-family: var(--font-noto-sans), sans-serif;
 }
 
 .features li {
@@ -65,50 +68,69 @@
 }
 
 .arrow {
-  color: #0070f3;
-  font-weight: 600;
+  font-weight: 700;
   display: inline-flex;
   align-items: center;
   font-size: 0.9375rem;
   margin-top: auto;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  font-family: var(--font-noto-sans), sans-serif;
 }
 
 /* Hover Effects */
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 .card:hover .image {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
 .card:hover .title,
 .card:hover .description,
 .card:hover .features,
+.card:hover .features li,
 .card:hover .arrow {
-  color: #fff;
+  color: #fff !important;
 }
 
 /* Variant: Orange */
 .variant-orange {
-  border-bottom: 4px solid #EA580C;
+  border: 2px solid #EA580C;
+}
+
+.variant-orange .title {
+  color: #EA580C;
+}
+
+.variant-orange .arrow {
+  color: #EA580C;
 }
 
 .variant-orange:hover {
-  background: #EA580C;
+  background: rgba(234, 88, 12, 0.8);
+  /* #EA580C with 80% opacity */
   border-color: #EA580C;
 }
 
 /* Variant: Purple */
 .variant-purple {
-  border-bottom: 4px solid #7C3AED;
+  border: 2px solid #6B21A8;
+}
+
+.variant-purple .title {
+  color: #6B21A8;
+}
+
+.variant-purple .arrow {
+  color: #6B21A8;
 }
 
 .variant-purple:hover {
-  background: #7C3AED;
-  border-color: #7C3AED;
+  background: rgba(107, 33, 168, 0.7);
+  /* #6B21A8 with 70% opacity */
+  border-color: #6B21A8;
 }
 
 @media (max-width: 768px) {

@@ -26,7 +26,7 @@ export default function Card({
         <p className={styles.description}>{description}</p>
         {features.length > 0 && (
           <ul className={styles.features}>
-            {features.slice(0, 3).map((feature, index) => (
+            {features.map((feature, index) => (
               <li key={index}>✓ {feature}</li>
             ))}
           </ul>

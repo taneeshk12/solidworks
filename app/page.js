@@ -25,46 +25,61 @@ export default function HomePage() {
     <>
       <Hero />
 
-      {/* About Us Section */}
-      <section className={styles.about}>
+      {/* About Us Section - Cream */}
+      <section className={`${styles.about} ${styles.creamBg}`}>
         <div className="container">
+          <h2 className={styles.aboutTitle}>About Us</h2>
           <div className={styles.aboutGrid}>
             <div className={styles.aboutImageWrapper}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/hero/home_hero1.png"
+                src="/about_us.jpeg"
                 alt="About CAB Authorized Training Centre"
                 className={styles.aboutImage}
               />
             </div>
             <div className={styles.aboutContent}>
-              <div className="section-header" style={{ textAlign: 'left', marginBottom: '1.5rem' }}>
-                <h2>About Us</h2>
-              </div>
-              <p>
-                We are a premier Authorized Training Centre committed to shaping the future of design engineering.
-                With a focus on practical skills and industry requirements, we help students and professionals excel.
+              <h3 className={styles.mainHeading}>
+                <span>Shaping the Future</span> <span className={styles.orangeTextHeading}>of Design Engineering</span>
+              </h3>
+              <p className={styles.italicDesc}>
+                We are a recognized training organization dedicated to providing comprehensive education and professional
+                services in SOLIDWORKS, a powerful solid modeling CAD (Computer-Aided Design), CAE (Computer-Aided
+                Engineering), and 3D Printing platform widely adopted across the design and manufacturing industries.
               </p>
-              <ul className={styles.aboutList}>
-                <li>Expert-led training programs</li>
-                <li>State-of-the-art lab facilities</li>
-                <li>Industry-recognized certifications</li>
-                <li>Dedicated placement support</li>
-              </ul>
-              <Button href="/about">Know More</Button>
+
+              <div className={styles.numberedList}>
+                <div className={styles.listItem}>
+                  <span className={styles.listNumber}>1. </span>
+
+                  <strong>Industry-aligned courses</strong> designed for designers, engineers, and architects across
+                  Mechanical, Electrical, Automotive, Robotics, Mechatronics, and Aeronautical fields.
+
+                </div>
+                <div className={styles.listItem}>
+                  <span className={styles.listNumber}>2. </span>
+
+                  <strong>Hands-on practical learning</strong> with expert guidance to bridge the gap between academic
+                  concepts and real-world industrial applications.
+
+                </div>
+              </div>
+
+              <Link href="/about" className={styles.knowMoreLink}>
+                Know More <span className={styles.chevron}>&gt;</span>
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className={styles.services}>
+      {/* Services Section - Peach */}
+      <section className={`${styles.services} ${styles.peachBg}`}>
         <div className="container">
-          <div className="section-header">
-            <h2>Our Services</h2>
+          <div className={styles.sectionHeader}>
+            <h2>Services We Offer</h2>
             <p>
-              Comprehensive solutions for design engineers and businesses seeking
-              CAD expertise
+              Comprehensive solutions for students, professionals, corporates and industries.
             </p>
           </div>
           <div className="grid grid-3">
@@ -72,16 +87,16 @@ export default function HomePage() {
               // Map service IDs to images and variants
               const serviceConfig = {
                 'solidworks-training': {
-                  image: '/services/training.png',
+                  image: '/services/training.jpeg',
                   variant: 'orange',
                 },
                 'placement': {
                   image: '/services/placements.png',
-                  variant: 'orange',
+                  variant: 'purple',
                 },
                 'design-services-manpower': {
-                  image: '/services/3d .png',
-                  variant: 'purple',
+                  image: '/services/3d.jpeg',
+                  variant: 'orange',
                 },
               };
 
@@ -103,32 +118,27 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Why Choose Us Section - Cream */}
+      <WhyChooseUs className={styles.creamBg} />
 
-      {/* Why Choose Us Section */}
-      <WhyChooseUs />
+      {/* Clients Marquee Section - Peach */}
+      <ClientsMarquee className={styles.peachBg} />
 
-      {/* Clients Marquee Section */}
-      <ClientsMarquee />
-
-      {/* Testimonials Section */}
-      <Testimonials />
+      {/* Testimonials Section - Cream */}
+      <Testimonials className={styles.creamBg} />
 
       {/* CTA Section */}
       <section className={styles.cta} id="contact">
         <div className="container">
           <div className={styles.ctaContent}>
-            <h2>Ready to Start Your Journey?</h2>
-            <p>
-              Get in touch with us today to learn more about our training programs
-              and placement services.
-            </p>
+            <h2 className={styles.ctaHeading}>
+              Ready to Accelerate Your <span>Engineering Career?</span>
+            </h2>
+            <p className={styles.ctaParagraph}>Join the ranks of certified professionals.</p>
             <div className={styles.ctaButtons}>
-              <Button href="mailto:info@cabauthorized.com" size="large">
-                Email Us
-              </Button>
-              <Button href="tel:+91-XXXXXXXXXX" variant="secondary" size="large">
-                Call Now
-              </Button>
+              <Link href="/courses" className={styles.ctaButton}>
+                View All Courses
+              </Link>
             </div>
           </div>
         </div>

@@ -31,9 +31,9 @@ const logos = [
     "/Company Logo/schurter-logo-approved.png"
 ];
 
-export default function ClientsMarquee() {
+export default function ClientsMarquee({ className }) {
     return (
-        <section className={styles.section}>
+        <section className={`${styles.section} ${className || ''}`}>
             <div className="container">
                 <h3 className={styles.heading}>
                     Trusted by Industry Leaders
